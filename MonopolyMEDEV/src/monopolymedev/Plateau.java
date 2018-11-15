@@ -48,7 +48,7 @@ public class Plateau {
      */
     public void initPlateau(){
         this.cases.add(new DepartOuTaxe('Depart',200));
-        this.cases.add(new Constructible(60, 'Mediterranean Avenue',null,10));
+        this.cases.add(new Constructible(60, 'Mediterranean Avenue',10));
         this.cases.add(new Communaute());
         this.cases.add(new Constructible(60,'Baltic Avenue',null,10));
         this.cases.add(new DepartOuTaxe('Income Taxe ',200));
