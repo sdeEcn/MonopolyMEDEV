@@ -53,7 +53,7 @@ public class Plateau {
         int res = 0;
         for (Case c : j.getProprietes()) {
             if (c instanceof Gare) {
-                res += 1;
+                res++;
             }
         }
         return res;
