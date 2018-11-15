@@ -35,6 +35,11 @@ public abstract class Case {
     public int getPosition() {
         return position;
     }
+    
+    public void setPosition(int position) {
+        this.position = position;
+    }    
+    
 
     /**
      * Constructeur de Case
@@ -62,23 +67,5 @@ public abstract class Case {
     public Case() {
         this.nom = "inconnu";
         this.position = 0;
-    }
-    
-    public void setPosition(int position) {
-        this.position = position;
-    }
-    
-    
-    
-    /**
-     *  Methode toString() de la classe Case
-     *  Permet de généré une desciption d'un objet de la classe Case
-     *  @return
-     */
-    
-    @Override
-    public String toString() {
-        return "Nom de la case  : " + nom + "  postion : " + position;
-    }
-    
+    }   
 }

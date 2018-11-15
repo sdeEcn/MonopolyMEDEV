@@ -9,7 +9,7 @@ package monopolymedev;
  *
  * @author Mael Guillossou
  */
-public class Carte extends PasAchetable {
+public class Carte extends NonAchetable {
 
     public Carte() {
     }
