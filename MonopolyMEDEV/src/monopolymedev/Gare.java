@@ -33,6 +33,8 @@ public class Gare extends Achetable{
 	//-----------------Methode-----------------
 	//----------------------------------------------- 
     
-    
+    public int calculLoyer(){
+    return proprietaire.nbGares()*2500;}
+}
 
 }
