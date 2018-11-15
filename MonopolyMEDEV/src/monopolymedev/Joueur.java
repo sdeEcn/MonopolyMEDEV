@@ -89,6 +89,30 @@ public class Joueur {
         this.position = 0;
     }
     
+    /**
+     * Transfère la somme d'argent passée en argument depuis ce joueur jusqu'au joueur passé en argument.
+     * @param joueur Joueur à qui donner de l'argent.
+     * @param somme Somme à transférer.
+     */
+    public void payer(Joueur joueur, int somme) {
+        if(this.argent < somme) { //Le joueur n'a plus assez d'argent.
+            System.out.println("Le joueur n'a plus d'argent.");
+            
+            joueur.setArgent(joueur.getArgent() + this.argent);
+            this.argent = 0;
+        } else { //Le joueur a suffisament d'argent.
+            joueur.setArgent(joueur.getArgent() + somme);
+            this.argent -= somme; 
+        }
+    }
+    
+    /*
+    * Renvoie un entier entre 1 et 6
+    */
+    public static int lancerDe() {
+        return ((int) Math.floor(Math.random() * 6)) + 1;
+    }
+    
     public String getNom() {
         return nom;
     }
@@ -136,17 +160,4 @@ public class Joueur {
     public void setPosition(int position) {
         this.position = position;
     }
-    
-    /*
-    * renvoie un entier entre 1 et 6
-    */
-    public static int lancerDe() {
-        return ((int) Math.floor(Math.random() * 6)) + 1;
-    }
-    
-    
-    
-    
-    
-    
 }
