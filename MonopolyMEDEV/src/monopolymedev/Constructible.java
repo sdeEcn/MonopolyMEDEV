@@ -1,3 +1,5 @@
+package monopolydev;
+
 public class Constructible extends Achetable{
     
     //-----------------------------------------------------
