@@ -1,4 +1,4 @@
-package MonopolyMEDEV;
+package monopolymedev;
 
 /**
  * classe qui regroupe les cases non achetables
@@ -12,8 +12,8 @@ public abstract class NonAchetable extends Case {
     public NonAchetable(NonAchetable c) {
         super(c);
     }
-    public NonAchetable(String nom, int position) {
-        super(nom,position);
+    public NonAchetable(String nom) {
+        super(nom);
     }
     
     

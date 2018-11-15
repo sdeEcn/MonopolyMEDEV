@@ -38,13 +38,12 @@ public abstract class Achetable extends Case {
     /**
      *
      * @param nom
-     * @param pos
      * @param p
      * @param prop
      * @param loy
      */
-    public Achetable(String nom, int pos, int p, Joueur prop, int loy) {
-        super(nom, pos);
+    public Achetable(String nom, int p, Joueur prop, int loy) {
+        super(nom);
         prix = p;
         proprietaire = prop;
         loyer = loy;
