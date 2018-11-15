@@ -39,7 +39,7 @@ public class Utilitaire extends Achetable {
         int n;
         int l;
         //on calcule le loyer en fonction du nombre de cases utilitaire du propriétaire de la case
-        n=nbUtilitaire(this.proprietaire);
+        n=this.proprietaire.nbUtilitaire();
         if (n==1){
             l=d*4;
         }else{
@@ -48,20 +48,7 @@ public class Utilitaire extends Achetable {
         return l;
     }  
     
-    /**
-     * calcule le nombre de cases utilitaires que possède un joueur
-     * @param j le joueur
-     * @return le nombre de cases utilitaires
-     */
-    public int nbUtilitaire(Joueur j){
-        int c=0;
-        for(int i=0; i<j.proprietes.size();i++){
-            if (j.proprietes.get(i) instanceof Utilitaire){
-                c=c+1;
-            }
-        }
-        return c;
-    }
+   
     
     @Override
     public String toString(){
