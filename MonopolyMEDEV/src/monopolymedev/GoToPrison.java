@@ -10,8 +10,8 @@ public class GoToPrison extends NonAchetable {
      * Constructeur par défaut de GoToPrison
      */
     public GoToPrison (){
-        nom="Allez en prison";
-        position=30;
+        this.setNom("Allez en prison");
+        this.setPosition=30;
     }
     
     /**
@@ -24,7 +24,7 @@ public class GoToPrison extends NonAchetable {
     /**
      * Méthode pour envoyer un joueur en prison
      */
-    public void envoyerPrison(Joueur j){
+    public static void envoyerPrison(Joueur j){
         System.out.println("Allez en prison! Vous ne passez pas par la case départ et ne touchez pas 60 0000€.");
     }
 }
