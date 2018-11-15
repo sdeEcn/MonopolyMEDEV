@@ -44,16 +44,17 @@ public class Prison extends NonAchetable {
       *sortie true paiement effectué
       *false paiement refusé
      */
-    public boolean payerSortie(Joueur j) {
+    public static boolean payerSortie(Joueur j) {
         //on vérifie si le joueur est en prison
+        int prixSortie = 20000;
         if (j.isEtatPrison() != 0) {
             //on vérifie si il a assez d'argent
-            if (j.getArgent < this.prixSortie) {
+            if (j.getArgent < prixSortie) {
                 System.out.println("pas assez d'argent");
                 return false;
             } else {
                 //on effectue le paiement
-                j.setArgent(j.getArgent() - this.prixSortie);
+                j.setArgent(j.getArgent() - prixSortie);
                 //on met à jour son statut
                 j.setEtatPrison(0);
                 System.out.println("joueur" + j + "vous etes libres");
@@ -71,9 +72,9 @@ public class Prison extends NonAchetable {
     *sortie true opération réussie
     *false non réussie
      */
-    public boolean utiliserCarte(Joueur j) {
+    public static boolean utiliserCarte(Joueur j) {
         // on vérifie si le joueur possède une carte qui permet de sortir de prison
-        if (isCarteSortiePrison()) {
+        if (j.isCarteSortiePrison()) {
             //on libère le joueur
             j.setEtatPrison(0);
             System.out.println("joueur" + j + "vous etes libres");
