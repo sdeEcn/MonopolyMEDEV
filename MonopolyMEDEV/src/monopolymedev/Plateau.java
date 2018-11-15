@@ -138,5 +138,13 @@ public class Plateau {
         }
 
     }
+    /**
+     * Méthode qui fait jouer tous les joueurs du plateau
+     */
+    public void tourDeJeu(){
+        for(Joueur j : this.joueurs){
+            j.tourDeJeu();
+        }
+    }
 
 }
