@@ -61,7 +61,9 @@ public class Constructible extends Achetable{
     
     /**
      * Affiche dans la console les informations concernant l'instance en cours.
+     * @return information du case
      */
+    @Override
     public String toString() {
         return "Case constructible " +nom+ ", possédée par " +proprietaire.getNom()+ ". Le prix d'achat est " +prix
                            + "€ et le loyer de base " +loyer+ "€. Il y a " +nbMaisons+ " maisons et "+ nbHotels
