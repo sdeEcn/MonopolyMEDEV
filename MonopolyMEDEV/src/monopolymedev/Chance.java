@@ -22,13 +22,14 @@ public class Chance extends Carte{
         /**
      *  Methode toString() de la classe Chance
      *  Permet de générer une desciption de la carte
+     * @return 
      */
     public String toString(){
         return "Case chance - piocher une carte"; }
     
     /**
      *
-     * @param j
+     * @param joueur
      */
     public void piocher(Joueur joueur){
         Random random = new Random();
