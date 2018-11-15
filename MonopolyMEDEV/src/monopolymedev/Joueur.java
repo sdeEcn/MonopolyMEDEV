@@ -42,6 +42,11 @@ public class Joueur {
     protected List<Carte> cartes;
     
     /**
+     * Position du joueur sur le plateau.
+     */
+    protected int position;
+    
+    /**
      * Valeur du dernier lancer de dé.
      */
     protected int dernierLancer;
