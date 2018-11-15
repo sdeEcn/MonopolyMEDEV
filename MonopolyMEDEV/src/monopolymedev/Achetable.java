@@ -9,12 +9,12 @@ package monopolymedev;
  *
  * @author sarah
  */
-public class Achetable extends Case {
+public abstract class Achetable extends Case {
 
     /**
      * @param args the command line arguments
      */
-    protected int prix;
+    private int prix;
     protected Joueur proprietaire;
     protected int loyer;
     
@@ -22,6 +22,37 @@ public class Achetable extends Case {
     public Achetable(){
         
     }
+    
+    //getters, setters
+    public int getPrix() {
+        return prix;
+    }
+
+    public void setPrix(int prix) {
+        this.prix = prix;
+    }
+
+    public int getLoyer() {
+        return loyer;
+    }
+
+    public void setLoyer(int loyer) {
+        this.loyer = loyer;
+    }
+
+    public Joueur getProprietaire() {
+        return proprietaire;
+    }
+
+    public void setProprietaire(Joueur proprietaire) {
+        this.proprietaire = proprietaire;
+    }
+    
+    //methodes
+    public void acheter(){
+        
+    }
+    public abstract void calculLoyer();
     
 
     
