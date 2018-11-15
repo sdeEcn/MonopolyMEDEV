@@ -38,7 +38,6 @@ public abstract class Achetable extends Case {
     /**
      *
      * @param nom
-     * @param pos
      * @param p
      * @param prop
      * @param loy

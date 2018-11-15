@@ -58,6 +58,7 @@ public abstract class Case {
         this.nom = "inconnu";
     }
     
+    
     /**
      *  Methode toString() de la classe Case
      *  Permet de généré une desciption d'un objet de la classe Case

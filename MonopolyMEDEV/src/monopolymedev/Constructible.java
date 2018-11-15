@@ -12,12 +12,12 @@ public class Constructible extends Achetable{
     //-----------------------------------------------------
     
     /**
-     *Le nombre d'hôtels construits dans l'instance en cours
+     * Le nombre d'hôtels construits dans l'instance en cours
      */
     private int nbHotels;
     
     /**
-     *Le nombres de maisons construites dans l'instance en cours
+     * Le nombres de maisons construites dans l'instance en cours
      */
     private int nbMaisons;
     
@@ -27,7 +27,7 @@ public class Constructible extends Achetable{
     //---------------------------------------------------------
     
     /**
-     *Le constructeur global
+     * Le constructeur global
      */
     public Constructible(int prix, String nom, Joueur proprietaire, int loyer, int position) {
         super(nom, position, prix, proprietaire, loyer);
@@ -36,7 +36,7 @@ public class Constructible extends Achetable{
     }
     
     /**
-     *Le constructeur de recopie
+     * Le constructeur de recopie
      */
     public Constructible(Constructible c) {
         this(c.prix, c.nom, c.proprietaire, c.loyer);
@@ -45,7 +45,7 @@ public class Constructible extends Achetable{
     }
     
     /**
-     *Le constructeur par défaut
+     * Le constructeur par défaut
      */
     public Constructible() {
         super();
@@ -59,11 +59,20 @@ public class Constructible extends Achetable{
     //----------------------------------------------------
     
     /**
-     *Retourne le loyer total en fonction du loyer de base et du nombre de constructions présentes sur la case.
-     *Une maison augmente le loyer de 20%, un hôtel de 100%.
+     * Retourne le loyer total en fonction du loyer de base et du nombre de constructions présentes sur la case.
+     * Une maison augmente le loyer de 20%, un hôtel de 100%.
      */
     public int calculLoyer() {
         return loyer*(1+(0.2*nbMaisons + nbHotels));
+    }
+    
+    /**
+     * Affiche les informations concernant l'instance en cours
+     */
+    public void toString() {
+        System.out.println("Case constructible " +nom+ ", possédée par " +proprietaire.getNom()+ ". Le prix d'achat est " +prix
+                           + "€ et le loyer de base " +loyer+ "€. Il y a " +nbMaisons+ " maisons et "+ nbHotels
+                           + " construits, pour un loyer total de " +calculLoyer()+ "€.");
     }
     
     

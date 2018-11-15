@@ -1,5 +1,6 @@
 package monopolymedev;
 
+
 /**
  * Cette classe représente la case envoyant les joueurs en prison
  * @author Mathilde
