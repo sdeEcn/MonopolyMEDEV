@@ -6,12 +6,6 @@ package monopolymedev;
  */
 public abstract class NonAchetable extends Case {
     
-    public NonAchetable(){
-    super();
-    }
-    public NonAchetable(NonAchetable c) {
-        super(c);
-    }
     public NonAchetable(String nom) {
         super(nom);
     }
