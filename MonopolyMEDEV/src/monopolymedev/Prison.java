@@ -82,5 +82,10 @@ public class Prison extends NonAchetable {
            return false;
         }
   }
+     
+    @override
+    public String toString(){
+    return("Prison \n caution à payer pour sortir:"+this.prixSortie); 
+                        }
 
 }
