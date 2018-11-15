@@ -5,7 +5,6 @@
  */
 package monopolymedev;
 
-import MonopolyMEDEV.NonAchetable;
 /**
  *
  * @author Mael Guillossou
