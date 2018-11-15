@@ -33,7 +33,6 @@ public class Utilitaire extends Achetable {
      * @param j joueur
      * @return loyer
      */
-    @Override
     public int calculLoyer(Joueur j){
         int d = j.dernierLancer;
         int n;
