@@ -53,19 +53,39 @@ public class Prison extends NonAchetable {
         return this.prixSortie;
     }
 
-    /**
-     * Methode permettant au joueur de payer pour pouvoir sortir de prison
-     *
-     * @param joueur : Parametre correspondant au joueur voulant payer sa sortie
-     * de la prison
-     */
-    public void payerSortie(Joueur joueur) {
-        if (joueur.argent >= prixSortie) {
-            joueur.argent = joueur.argent - prixSortie;
-            joueur.etatPrison = 0;
-        } else {
-            System.out.println("Paiement impossible, vous restez ou vous etes !");
+   /*methode pour payer la caution
+      
+     *@param j le joueur qui veut payer 
+      *sortie true paiement effectué
+      *false paiement refusé
+      */
+  public boolean payerSortie(Joueur j){
+      //on vérifie si le joueur est en prison
+        if (j.isEtatPrison() != 0 ) {
+            //on vérifie si il a assez d'argent
+            if (j.getArgent < this.prixSortie){
+            system.out.println("pas assez d'argent");
+            return false;
+            }
+            else {
+            //on effectue le paiement
+            j.setArgent(j.getArgent() - this.prixSortie);
+            //on met à jour son statut
+            j.setEtatPrison(0);
+            system.out.println("joueur"+j+"vous etes libres");
+            return true;
+            }
+            
+        } 
+        else {
+            system.out.println("Vous n'etes pas en prison");
+           return false;
         }
-    }
+  }
+     
+    @override
+    public String toString(){
+    return("Prison \n caution à payer pour sortir:"+this.prixSortie); 
+                        }
 
 }

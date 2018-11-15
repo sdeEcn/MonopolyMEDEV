@@ -44,6 +44,19 @@ public class Plateau {
         this.joueurs = joueurs;
     }
     
-    
+    /**
+     * 
+     * @param j joueur
+     * @return renvoie le nombre de gares possédées par le joueur j
+     */
+    public int nbGare(Joueur j) {
+        int res = 0;
+        for (Case c : j.getProprietes()) {
+            if (c instanceof Gare) {
+                res++;
+            }
+        }
+        return res;
+    }
     
 }
