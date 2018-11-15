@@ -43,6 +43,7 @@ public class Chance extends Carte{
                 break;
             case 3:
                 System.out.println("Vous êtes imposé pour les réparations de voirie");
+                this.reparation(2500, 10000, j);
                 break;
             case 4:
                 break;
