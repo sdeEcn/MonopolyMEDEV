@@ -44,23 +44,6 @@ public class Constructible extends Achetable{
         nbMaisons = 0;
     }
     
-    /**
-     * Le constructeur de recopie.
-     */
-    public Constructible(Constructible c) {
-        this(c.prix, c.nom, c.proprietaire, c.loyer);
-        nbHotels = 0;
-        nbMaisons = 0;
-    }
-    
-    /**
-     * Le constructeur par défaut.
-     */
-    public Constructible() {
-        super();
-        nbHotels = 0;
-        nbMaisons = 0;
-    }
     
     
     //----------------------------------------------------
@@ -70,9 +53,9 @@ public class Constructible extends Achetable{
     /**
      * Retourne le loyer total en fonction du loyer de base et du nombre de constructions présentes sur la case.
      * Une maison augmente le loyer de 20%, un hôtel de 100%.
-     * @param joueurCourant Représente le joueur qui vient de lancer les dés. Ce paramètre est inutile ici.
+     * @param j Représente le joueur qui vient de lancer les dés. Ce paramètre est inutile ici.
      */
-    public int calculLoyer(Joueur joueurCourant) {
+    public int calculLoyer(Joueur j) {
         return (int) (loyer*(1+(0.2*nbMaisons + nbHotels)));
     }
     
