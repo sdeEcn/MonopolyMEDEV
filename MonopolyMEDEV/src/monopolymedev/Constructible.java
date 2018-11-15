@@ -36,6 +36,15 @@ public class Constructible extends Achetable{
     }
     
     /**
+     * Un constructeur sans attribut propriétaire pour l'initialisation du plateau.
+     */
+    public Constructible(int prix, String nom, int loyer) {
+        super(nom, prix, loyer);
+        nbHotels = 0;
+        nbMaisons = 0;
+    }
+    
+    /**
      * Le constructeur de recopie.
      */
     public Constructible(Constructible c) {
