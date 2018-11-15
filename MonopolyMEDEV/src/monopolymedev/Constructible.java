@@ -94,7 +94,7 @@ public class Constructible extends Achetable{
         return nbMaisons;
     }
     
-    public void setNbMaisons() {
+    public void setNbMaisons(int nbMaisons) {
         this.nbMaisons = nbMaisons;
     }
 }
