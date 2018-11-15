@@ -14,11 +14,13 @@ public class Utilitaire extends Achetable {
     public Utilitaire(){
         super();
     }
-    public Utilitaire(int p, Joueur pro, int l){
-        super(p,pro,l);
+    public Utilitaire(String nom, int pos, int p, Joueur pro, int l){
+        super(nom,pos,p,pro,l);
     }
-    public Utilitaire(Utilitaire u){
-        super(u);
-    }
+
     
+    //méthodes
+    public void calculLoyer(){
+        
+    }  
 }
