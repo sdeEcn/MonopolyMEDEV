@@ -53,11 +53,6 @@ public class Joueur {
     protected int dernierLancer;
     
     /**
-     * Position du joueur sur le plateau
-     */
-    private int position; 
-    
-    /**
      * Constructeur de Joueur.
      * @param nom Nom du joueur.
      * @param argent Quantité d'argent du joueur.
