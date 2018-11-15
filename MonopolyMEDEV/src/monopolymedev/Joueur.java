@@ -137,6 +137,12 @@ public class Joueur {
         this.position = position;
     }
     
+    /*
+    * renvoie un entier entre 1 et 6
+    */
+    public static int lancerDe() {
+        return ((int) Math.floor(Math.random() * 6)) + 1;
+    }
     
     
     
