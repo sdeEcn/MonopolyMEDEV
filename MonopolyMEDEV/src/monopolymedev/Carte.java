@@ -6,7 +6,7 @@
 package monopolymedev;
 
 /**
- *
+ * Case carte : soit case change soit communaute
  * @author Mael Guillossou
  */
 
@@ -15,15 +15,25 @@ public abstract class Carte extends NonAchetable {
     public Carte() {
         super();
     }
-    
+
+    /**
+     * Pioche une carte et applique l'effet au joueur
+     * @param j joueur qui pioche
+     */
     public abstract void piocher(Joueur j);
 
+    /**
+     * Fonction utilitaire calculant les réparations à payer pour un certain joueur. Et le fait payer.
+     * @param maison prix par maison
+     * @param hotel prix par hotel
+     * @param joueur joueur qui doit payer
+     * @return le prix total à payer par le joueur
+     */
     protected int reperation(int maison, int hotel, Joueur joueur) {
-        System.out.println("Réparation dans maison (2500/maison 10 000/Hotel)");
         int aPayer = 0;
         for (Achetable propriete: joueur.getProprietes()) {
             if(propriete instanceof Constructible) {
-                aPayer += 2500*((Constructible) propriete).getNbMaisons() + 10000*((Constructible) propriete).getNbHotels();
+                aPayer += maison*((Constructible) propriete).getNbMaisons() + hotel*((Constructible) propriete).getNbHotels();
             }
         }
 
