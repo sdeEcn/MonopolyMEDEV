@@ -55,7 +55,7 @@ public class Joueur {
      * @param cartes Liste de toutes les cartes possédées par le joueur.
      * @param position Position du joueur sur le plateau.
      */
-    public Joueur(String nom, int argent, boolean etatPrison, List<Case> proprietes, List<Carte> cartes, int position) {
+    public Joueur(String nom, int argent, int etatPrison, List<Case> proprietes, List<Carte> cartes, int position) {
         this.nom = nom;
         this.argent = argent;
         this.etatPrison = etatPrison;
@@ -83,7 +83,7 @@ public class Joueur {
     public Joueur() {
         this.nom = "";
         this.argent = 0;
-        this.etatPrison = false;
+        this.etatPrison = 0;
         this.proprietes = new ArrayList<>();
         this.cartes = new ArrayList<>();
         this.position = 0;
@@ -129,11 +129,11 @@ public class Joueur {
         this.argent = argent;
     }
 
-    public boolean isEtatPrison() {
+    public int isEtatPrison() {
         return etatPrison;
     }
 
-    public void setEtatPrison(boolean etatPrison) {
+    public void setEtatPrison(int etatPrison) {
         this.etatPrison = etatPrison;
     }
 
