@@ -14,7 +14,7 @@ public abstract class Achetable extends Case {
     /**
      * Prix d'achat de la case
      */
-    private int prix;
+    protected int prix;
 
     /**
      *  Joueur possédant la case si elle a été achetée
