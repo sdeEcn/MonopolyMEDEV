@@ -28,8 +28,8 @@ public class Utilitaire extends Achetable {
      * @param pro propriétaire de la case
      * @param l loyer
      */
-    public Utilitaire(String nom, int pos, int p, Joueur pro, int l){
-        super(nom,pos,p,pro,l);
+    public Utilitaire(String nom, int p, Joueur pro, int l){
+        super(nom,p,pro,l);
     }
 
     
