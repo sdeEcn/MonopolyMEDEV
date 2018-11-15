@@ -4,7 +4,11 @@
  * and open the template in the editor.
  */
 package monopolymedev;
-
+/**
+ * classe Gare, sous classe de Achetable
+ * 
+ * @author Lilian
+ */
 public class Gare extends Achetable{
     
     		
