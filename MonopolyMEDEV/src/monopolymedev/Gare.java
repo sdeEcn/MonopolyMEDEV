@@ -36,7 +36,7 @@ public class Gare extends Achetable{
     this(g.prix,g.nom,g.proprietaire,g.loyer);}
 
 	/**
-     * Le constructeur de recopie
+     * Le constructeur de recopie sans propriétaire
      */
     public Gare(int prix, String nom, int loyer){
         this(g.prix,g.nom,g.loyer);
