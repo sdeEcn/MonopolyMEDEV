@@ -9,13 +9,13 @@ package monopolymedev;
  *
  * @author Mael Guillossou
  */
-public class Carte extends NonAchetable {
+
+public abstract class Carte extends NonAchetable {
 
     public Carte() {
+        super();
     }
     
-    public void piocher() {
-        
-    }
+    public abstract void piocher(Joueur j);
     
 }

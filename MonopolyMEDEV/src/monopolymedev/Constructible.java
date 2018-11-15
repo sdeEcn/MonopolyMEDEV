@@ -1,5 +1,10 @@
 package monopolymedev;
 
+
+/* La classe constructible représente les cases que le joueur peut acheter et sur lesquelles
+ * il peut construire des maisons et des hôtels. Elle correspond à une case en couleur du monopoly réel.
+*/
+
 public class Constructible extends Achetable{
     
     //-----------------------------------------------------

@@ -29,7 +29,7 @@ public class Joueur {
     /**
      * Vrai si le joueur est en prison, faux sinon.
      */
-    private boolean etatPrison;
+    private int etatPrison;
     
     /**
      * Liste de toutes les cases possédées par le joueur.
