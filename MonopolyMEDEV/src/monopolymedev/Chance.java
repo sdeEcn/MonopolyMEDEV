@@ -42,7 +42,7 @@ public class Chance extends Carte{
                 j.setArgent(j.getArgent()+5000);
                 break;
             case 3:
-                System.out.println("Vous êtes imposé pour les réparations de voirie");
+                System.out.println("Vous êtes imposé pour les réparations de voirie (2 500/maison 10 000/hotel)");
                 this.reparation(2500, 10000, j);
                 break;
             case 4:
