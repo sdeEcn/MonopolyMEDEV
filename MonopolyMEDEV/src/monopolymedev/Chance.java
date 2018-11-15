@@ -52,6 +52,7 @@ public class Chance extends Carte{
             case 5:
                 System.out.println("Payez les frais de scolarité : 15 000");
                 j.setArgent(j.getArgent()-15000);
+                break;
         }
     }
 }
