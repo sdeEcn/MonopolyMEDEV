@@ -27,7 +27,7 @@ public class Communaute extends Carte {
      * Pioche une carte communauté et applique l'effet au joueur
      * @param joueur
      */
-    public static void piocher(Joueur joueur) {
+    public void piocher(Joueur joueur) {
         Random random = new Random();
         switch (random.nextInt(17)) {
             case 0:
@@ -114,7 +114,7 @@ public class Communaute extends Carte {
             case 16:
                 System.out.println("Piochez une carte chance");
                 Chance chance = new Chance();
-                chance.piocher();
+                chance.piocher(joueur);
                 break;
             default:
                 System.out.println("Erreur...");
