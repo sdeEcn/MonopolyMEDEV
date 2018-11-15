@@ -65,14 +65,7 @@ public class Communaute extends Carte {
                 break;
             case 10:
                 System.out.println("Réparation dans maison (2500/maison 10 000/Hotel)");
-                int aPayer = 0;
-                for (Achetable propriete: joueur.getProprietes()) {
-                    if(propriete instanceof Constructible) {
-                        aPayer += 2500*((Constructible) propriete).getNbMaisons() + 10000*((Constructible) propriete).getNbHotels()
-                    }
-                }
-
-                joueur.setArgent(joueur.getArgent() - aPayer);
+                System.out.println("Vous payer "+this.reperation(2500, 10000, joueur));
                 break;
             case 11:
                 System.out.println("Votre prêt rapporte 15000");
@@ -80,8 +73,19 @@ public class Communaute extends Carte {
                 break;
             case 12:
                 System.out.println("Libéré de prison");
-
-
+                joueur.setCarteSortiePrison(true);
+                break;
+            case 13:
+                System.out.println("Rdv rue de la paix");
+                joueur.setPosition(39);
+                break;
+            case 14:
+                System.out.println("Voirie 4000/maison 11500/hotel");
+                System.out.println("Vous payer "+this.reperation(4000, 11500, joueur));
+                break;
+            case 15:
+                System.out.println("La banque vous verse 5000");
+                joueur.setArgent(joueur.getArgent() + 5000);
         }
     }
 }

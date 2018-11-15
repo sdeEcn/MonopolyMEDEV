@@ -17,7 +17,7 @@ public abstract class Carte extends NonAchetable {
     
     public abstract void piocher(Joueur j);
 
-    private void reperation(String msg, int maison, int hotel, Joueur joueur) {
+    protected int reperation(int maison, int hotel, Joueur joueur) {
         System.out.println("Réparation dans maison (2500/maison 10 000/Hotel)");
         int aPayer = 0;
         for (Achetable propriete: joueur.getProprietes()) {
@@ -27,6 +27,8 @@ public abstract class Carte extends NonAchetable {
         }
 
         joueur.setArgent(joueur.getArgent() - aPayer);
+
+        return aPayer;
     }
     
 }
