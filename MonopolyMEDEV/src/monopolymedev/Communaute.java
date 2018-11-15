@@ -15,7 +15,13 @@ public class Communaute extends Carte {
 
     public Communaute() {
     }
-
+        /**
+     *  Methode toString() de la classe communauté
+     *  Permet de générer une description de la carte
+     */
+    public String toString(){
+    return "il s'agit d'une carte communauté"; }
+    
     /**
      * Pioche une carte communauté et applique l'effet au joueur
      * @param joueur
@@ -65,7 +71,7 @@ public class Communaute extends Carte {
                 break;
             case 10:
                 System.out.println("Réparation dans maison (2500/maison 10 000/Hotel)");
-                System.out.println("Vous payer "+this.reperation(2500, 10000, joueur));
+                System.out.println("Vous payer "+this.reparation(2500, 10000, joueur));
                 break;
             case 11:
                 System.out.println("Votre prêt rapporte 15000");
@@ -81,7 +87,7 @@ public class Communaute extends Carte {
                 break;
             case 14:
                 System.out.println("Voirie 4000/maison 11500/hotel");
-                System.out.println("Vous payer "+this.reperation(4000, 11500, joueur));
+                System.out.println("Vous payer "+this.reparation(4000, 11500, joueur));
                 break;
             case 15:
                 System.out.println("La banque vous verse 5000");
