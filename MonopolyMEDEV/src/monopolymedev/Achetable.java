@@ -22,6 +22,12 @@ public abstract class Achetable extends Case {
     public Achetable(){
         
     }
+    public Achetable(String nom, int pos, int p, Joueur prop, int loy){
+        super(nom, pos);
+        prix = p;
+        proprietaire = prop;
+        loyer = loy;
+    }
     
     //getters, setters
     public int getPrix() {
