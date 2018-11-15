@@ -18,7 +18,7 @@ public abstract class Case {
      *  numero de la case sur le plateau
      */
     protected String nom;
-    protected int position;
+    
 
     
     /**
@@ -33,32 +33,22 @@ public abstract class Case {
         this.nom = nom;
     }
 
-    public int getPosition() {
-        return position;
-    }
-
-    public void setPosition(int position) {
-        this.position = position;
-    }
-    
-    /**
-     * Constructeur de Case
-     * @param nom nom de la nouvelle case
-     * @param position position de la nouvelle case
-     */
-    
-    public Case(String nom, int position) {
-        this.nom = nom;
-        this.position = position;
-    }
+ 
 
     /**
      * Constructeur de Case
      * @param c case que l'on cree
      */
     public Case(Case c) {
-        this.nom = c.getNom();
-        this.position = c.getPosition();
+        this.nom = c.getNom(); 
+    }
+    
+    /**
+     * Constructeur de Case
+     * @param nom nom de la case que l'on cree
+     */
+    public Case(String nom) {
+        this.nom = nom; 
     }
     
     /**
@@ -66,10 +56,7 @@ public abstract class Case {
      */
     public Case() {
         this.nom = "inconnu";
-        this.position = 0;
     }
-    
-    
     
     
     /**
@@ -80,7 +67,7 @@ public abstract class Case {
     
     @Override
     public String toString() {
-        return "Nom de la case  : " + nom + "  postion : " + position;
+        return "Nom de la case  : " + nom ;
     }
     
 }

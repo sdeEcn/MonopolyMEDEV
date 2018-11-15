@@ -7,45 +7,85 @@ package MonopolyMEDEV;
 
 /**
  * case prison
+ *
  * @author spectre x360
  */
-public class Prison extends NonAchetable{
-     /**
+public class Prison extends NonAchetable {
+
+    /**
      * Attribut:
+     *
      * @param prixSortie montant fixe à payer pour pouvoir sortir
      */
     private int prixSortie;
-     
-    /**constructeur
+
+    /**
+     * constructeur
+     *
      * @param prix prix de sortie
      */
     public Prison(int prix) {
-            this.prixSortie=prix;
-            }
-    /**constructeur de recopie
+        this.prixSortie = prix;
+    }
+
+    /**
+     * constructeur de recopie
+     *
      * @param p prison à copier
      */
-    public Prison(Prison p){
-    this.prixSortie=p.getPrixSortie();
+    public Prison(Prison p) {
+        this.prixSortie = p.getPrixSortie();
     }
-    /**constructeur par défaut
+
+    /**
+     * constructeur par défaut
      */
-      public Prison() {
-            this.prixSortie=0;
-            }
-    
+    public Prison() {
+        this.prixSortie = 0;
+    }
+
     //getter / setter
-      public void setPrixSortie(int p){
-      this.prixSortie=p;
-      }
-      public int getPrixSortie(){
-       return this.prixSortie;   
-      }
+    public void setPrixSortie(int p) {
+        this.prixSortie = p;
+    }
+
+    public int getPrixSortie() {
+        return this.prixSortie;
+    }
+
+   /*methode pour payer la caution
       
-      
-      /*methode pour payer la caution
-      
-     *
+     *@param j le joueur qui veut payer 
+      *sortie true paiement effectué
+      *false paiement refusé
       */
-  
+  public boolean payerSortie(Joueur j){
+      //on vérifie si le joueur est en prison
+        if (j.isEtatPrison() != 0 ) {
+            //on vérifie si il a assez d'argent
+            if (j.getArgent < this.prixSortie){
+            system.out.println("pas assez d'argent");
+            return false;
+            }
+            else {
+            //on effectue le paiement
+            j.setArgent(j.getArgent() - this.prixSortie);
+            //on met à jour son statut
+            j.setEtatPrison(0);
+            system.out.println("joueur"+j+"vous etes libres");
+            return true;
+            }
+            
+        } 
+        else {
+            system.out.println("Vous n'etes pas en prison");
+           return false;
+        }
+  }
+     
+    @override
+    public String toString(){
+    return("Prison \n caution à payer pour sortir:"+this.prixSortie); 
+                        }
+
 }
