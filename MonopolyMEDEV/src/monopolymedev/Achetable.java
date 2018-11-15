@@ -119,6 +119,7 @@ public abstract class Achetable extends Case {
         if (prop.getArgent() >= this.prix) {
             prop.setArgent(prop.getArgent() - this.prix);
             this.proprietaire = prop;
+            prop.proprietes.add(this);
         } else {
             System.out.println("Le joueur n'a pas les moyens pour cette case");
         }
