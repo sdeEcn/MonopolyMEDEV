@@ -21,7 +21,7 @@ public class MonopolyMEDEV {
         
         jeu.initPlateau();
         for (int i =1;i<5;i++){
-            jeu.getJoueurs().add(new Joueur("J"+i,100000,0,new ArrayList<>(),new ArrayList<>(),0,jeu,0));
+            jeu.getJoueurs().add(new Joueur("J"+i,100000,0,new ArrayList<Achetable>(),false,0,0,jeu));
         }
         while(!jeu.finPartie()){
             jeu.tourDeJeu();

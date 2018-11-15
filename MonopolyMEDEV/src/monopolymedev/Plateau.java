@@ -8,6 +8,7 @@ package monopolymedev;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
+
 /**
  * Classe qui represente le plateau de jeu, il contient la liste des joueurs et
  * la liste des cases
