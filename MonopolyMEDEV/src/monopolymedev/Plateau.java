@@ -43,47 +43,50 @@ public class Plateau {
     public void setJoueurs(LinkedList<Joueur> joueurs) {
         this.joueurs = joueurs;
     }
-    
+    /**
+     * Méthode qui permet d'initialiser chaque case du tableau
+     */
     public void initPlateau(){
-        this.cases.add(new DepartOuTaxe());
-        this.cases.add(new Constructible());
+        this.cases.add(new DepartOuTaxe('Depart',200));
+        this.cases.add(new Constructible(60, 'Mediterranean Avenue',null,10));
         this.cases.add(new Communaute());
-        this.cases.add(new Constructible());
-        this.cases.add(new DepartOuTaxe());
-        this.cases.add(new Gare());
-        this.cases.add(new Constructible());
+        this.cases.add(new Constructible(60,'Baltic Avenue',null,10));
+        this.cases.add(new DepartOuTaxe('Income Taxe ',200));
+        this.cases.add(new Gare(200,'Reading Railroad',null,));
+        this.cases.add(new Constructible(100,'Oriental Avenue',null,20));
         this.cases.add(new Chance());
-        this.cases.add(new Constructible());
-        this.cases.add(new Constructible());
+        this.cases.add(new Constructible(100,'Vermont Avenue',null,20));
+        this.cases.add(new Constructible(120,'Connecticut Avenue',null,20));
         this.cases.add(new Prison());
-        this.cases.add(new Constructible());
+        this.cases.add(new Constructible(140,'St Charles Place',null,30));
         this.cases.add(new Utilitaire());
-        this.cases.add(new Constructible());
+        this.cases.add(new Constructible(140,'State Avenue',null,30));
+        this.cases.add(new Constructible(160,'Virginie Avenue',null,30));
         this.cases.add(new Gare());
-        this.cases.add(new Constructible());
+        this.cases.add(new Constructible(180,'St James Place',null,40));
         this.cases.add(new Communaute());
-        this.cases.add(new Constructible());
-        this.cases.add(new Constructible());
+        this.cases.add(new Constructible(180,'Tennessie Avenue',null,40));
+        this.cases.add(new Constructible(200,'New York Avenue',null,40));
         this.cases.add(new Cagnotte());
-        this.cases.add(new Constructible());
+        this.cases.add(new Constructible(220,'Kentucky Avenue',null,50));
         this.cases.add(new Chance());
-        this.cases.add(new Constructible());
-        this.cases.add(new Constructible());
+        this.cases.add(new Constructible(220,'St James Place',null,50));
+        this.cases.add(new Constructible(240,'St James Place',null,50));
         this.cases.add(new Gare());
-        this.cases.add(new Constructible());
-        this.cases.add(new Constructible());
+        this.cases.add(new Constructible(260,'Atlantic Avenue',null,60));
+        this.cases.add(new Constructible(260,'Ventnor Avenue',null,60));
         this.cases.add(new Utilitaire());
-        this.cases.add(new Constructible());
+        this.cases.add(new Constructible(280,'Marvin Gardens',null,60));
         this.cases.add(new GoToPrison());
-        this.cases.add(new Constructible());
-        this.cases.add(new Constructible());
+        this.cases.add(new Constructible(300,'Pacific Avenue',null,70));
+        this.cases.add(new Constructible(300,'North Carolina Avenue',null,70));
         this.cases.add(new Communaute());
-        this.cases.add(new Constructible());
+        this.cases.add(new Constructible(320,'Pennsylvania Avenue',null,70));
         this.cases.add(new Gare());
         this.cases.add(new Chance());
-        this.cases.add(new Constructible());
+        this.cases.add(new Constructible(350,'Park Place',null,80));
         this.cases.add(new DepartOuTaxe());
-        this.cases.add(new Constructible());
+        this.cases.add(new Constructible(400,'Boardwalk',null,90));
         
     }
     
