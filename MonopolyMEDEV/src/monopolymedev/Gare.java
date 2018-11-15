@@ -45,6 +45,7 @@ public class Gare extends Achetable {
      *
      * @return information de la gare.
      */
+    @Override
     public String toString() {
         return "Case Gare: " + nom + ", possédée par " + proprietaire.getNom() + ". Le prix d'achat est " + prix
                 + "€ et le loyer de base " + loyer + "€";

@@ -52,7 +52,7 @@ public class Chance extends Carte{
                 break;
             case 5:
                 System.out.println("Payez les frais de scolarité : 15 000");
-                joueur.setArgent(j.getArgent()-15000);
+                joueur.setArgent(joueur.getArgent()-15000);
                 break;
             case 6:
                 System.out.println("Rendez-vous Rue de la Paix");
