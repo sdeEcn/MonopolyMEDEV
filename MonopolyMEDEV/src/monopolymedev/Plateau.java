@@ -44,6 +44,22 @@ public class Plateau {
     public void setJoueurs(LinkedList<Joueur> joueurs) {
         this.joueurs = joueurs;
     }
+    
+    /**
+     * 
+     * @param j joueur
+     * @return renvoie le nombre de gares possédées par le joueur j
+     */
+    public int nbGare(Joueur j) {
+        int res = 0;
+        for (Case c : j.getProprietes()) {
+            if (c instanceof Gare) {
+                res++;
+            }
+        }
+        return res;
+    }
+    
 
     /**
      * Permet de verifier si la partie doit se terminier ou non

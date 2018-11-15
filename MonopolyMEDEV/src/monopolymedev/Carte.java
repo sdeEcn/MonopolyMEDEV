@@ -9,6 +9,7 @@ package monopolymedev;
  *
  * @author Mael Guillossou
  */
+
 public abstract class Carte extends NonAchetable {
 
     public Carte() {
