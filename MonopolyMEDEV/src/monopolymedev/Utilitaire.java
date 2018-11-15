@@ -23,13 +23,12 @@ public class Utilitaire extends Achetable {
     /**
      * constructeur avec paramètre
      * @param nom nom de la case
-     * @param pos numéro de la caase sur le plateau
      * @param p prix de la case
      * @param pro propriétaire de la case
      * @param l loyer
      */
-    public Utilitaire(String nom, int pos, int p, Joueur pro, int l){
-        super(nom,pos,p,pro,l);
+    public Utilitaire(String nom, int p, Joueur pro, int l){
+        super(nom,p,pro,l);
     }
 
     
