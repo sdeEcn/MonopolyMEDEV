@@ -15,6 +15,7 @@ public class Cagnotte extends NonAchetable{
     private int valeur;
     
     public Cagnotte (){
+        super("Cagnotte");
         this.valeur = 2000;
     }
 
