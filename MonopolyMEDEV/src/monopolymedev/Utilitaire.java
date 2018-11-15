@@ -8,12 +8,6 @@ package monopolymedev;
 public class Utilitaire extends Achetable {
     //constructeurs
 
-    /**
-     * constructeur par défaut
-     */
-    public Utilitaire(){
-        super();
-    }
 
     /**
      * constructeur avec paramètre, on fixe le loyer à 0 car il n'a pas de sens pour ce type de case
