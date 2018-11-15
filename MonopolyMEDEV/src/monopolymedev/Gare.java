@@ -7,7 +7,7 @@ package monopolymedev;
 /**
  * classe Gare, sous classe de Achetable
  * 
- * @author Lilian
+ * @author Lilian Mehl
  */
 public class Gare extends Achetable{
     
