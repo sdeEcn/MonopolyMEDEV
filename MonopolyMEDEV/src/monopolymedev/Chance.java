@@ -37,13 +37,9 @@ public class Chance extends Carte{
                 break;
             case 3:
                 System.out.println("Vous êtes imposé pour les réparations de voirie");
-                int perte = 0;
-                for(Achetable a: Joueur.getProprietes()){
-                    if a instanceofa
-                }
-                j.setArgent(0);
+                break;
             case 4:
-                
+                break;
         }
     }
 }
