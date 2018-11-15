@@ -36,7 +36,7 @@ public abstract class Achetable extends Case {
     }
 
     /**
-     *
+     *  Constructeur avec proprietaire
      * @param nom
      * @param p
      * @param prop
@@ -48,6 +48,15 @@ public abstract class Achetable extends Case {
         proprietaire = prop;
         loyer = loy;
     }
+    /**
+    * Constructeur sans proprietaire
+    */
+    public Achetable(String nom, int p, int loy){
+        super(nom);
+        prix = p;
+        loyer = loy;
+    }
+  
 
     //getters, setters
 
@@ -118,6 +127,6 @@ public abstract class Achetable extends Case {
     /**
      *  Méthode permettant de calculer le loyer d'après les maisons construites
      */
-    public abstract int calculLoyer();
+    public abstract int calculLoyer(Joueur j);
 
 }
