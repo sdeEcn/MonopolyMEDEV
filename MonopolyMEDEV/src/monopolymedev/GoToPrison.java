@@ -1,5 +1,7 @@
 package monopolymedev;
 
+import MonopolyMEDEV.NonAchetable;
+
 /**
  * Cette classe représente la case envoyant les joueurs en prison
  * @author Mathilde
