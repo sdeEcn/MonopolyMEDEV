@@ -19,21 +19,10 @@ public class Gare extends Achetable{
     /**
      * Le constructeur de recopie
      */
-    
-    public Gare(){
-    super();}
-    /**
-     * Le constructeur de recopie
-     */
     public Gare(int prix, String nom, Joueur proprietaire, int loyer){
         super(nom,prix,proprietaire,loyer);
     }
     
-    /**
-     * Le constructeur de recopie
-     */
-    public Gare(Gare g){
-    this(g.prix,g.nom,g.proprietaire,g.loyer);}
     
    	//-----------------------------------------------
 	//-----------------Methode-----------------
