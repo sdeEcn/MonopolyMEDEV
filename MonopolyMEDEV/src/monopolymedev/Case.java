@@ -52,7 +52,9 @@ public abstract class Case {
         this.nom = "inconnu";
     }
     
-    
+    public Case(String nom) {
+        this.nom = nom;
+    }
     
     
     /**
