@@ -9,6 +9,13 @@ package monopolymedev;
  *
  * @author Mael Guillossou
  */
-public class Chance {
+public class Chance extends Carte{
     
+    public Chance(){
+        super();
+    }
+    
+    public void piocher(Joueur j){
+        
+    }
 }
