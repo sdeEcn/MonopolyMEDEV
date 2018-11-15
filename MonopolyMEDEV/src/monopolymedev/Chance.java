@@ -19,6 +19,12 @@ public class Chance extends Carte{
     public Chance(){
         super();
     }
+        /**
+     *  Methode toString() de la classe Chance
+     *  Permet de générer une desciption de la carte
+     */
+    public String toString(){
+    return "il s'agit d'une carte chance"; }
     
     /**
      *
@@ -36,14 +42,11 @@ public class Chance extends Carte{
                 j.setArgent(j.getArgent()+5000);
                 break;
             case 3:
-                System.out.println("Vous êtes imposé pour les réparations de voirie");
-                int perte = 0;
-                for(Achetable a: Joueur.getProprietes()){
-                    if a instanceofa
-                }
-                j.setArgent(0);
+                System.out.println("Vous êtes imposé pour les réparations de voirie (2 500/maison 10 000/hotel)");
+                this.reparation(2500, 10000, j);
+                break;
             case 4:
-                
+                break;
         }
     }
 }
