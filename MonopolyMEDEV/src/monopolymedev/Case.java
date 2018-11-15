@@ -6,7 +6,8 @@
 package monopolymedev;
 
 /**
- *
+ * Modélise une case du plateau
+ * Classe-mere abstraite de tous les types de cases du plateau
  * @author Clement
  */
 public abstract class Case {
