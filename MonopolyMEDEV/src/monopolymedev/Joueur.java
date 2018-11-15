@@ -29,7 +29,8 @@ public class Joueur {
     /**
      * Nombre de tours restants avant que le joueur puisse sortir de prison.
      */
-    protected int etatPrison;
+    private int etatPrison;
+
     
     /**
      * Liste de toutes les cases possédées par le joueur.
@@ -50,7 +51,7 @@ public class Joueur {
      * Valeur du dernier lancer de dé.
      */
     protected int dernierLancer;
-
+    
     /**
      * Constructeur de Joueur.
      * @param nom Nom du joueur.
@@ -61,6 +62,8 @@ public class Joueur {
      * @param position Position du joueur sur le plateau.
      * @param dernierLancer Valeur du dernier lancer de dé.
      */
+
+
     public Joueur(String nom, int argent, int etatPrison, List<Achetable> proprietes, List<Carte> cartes, int position, int dernierLancer) {
         this.nom = nom;
         this.argent = argent;
@@ -151,6 +154,7 @@ public class Joueur {
     public void setArgent(int argent) {
         this.argent = argent;
     }
+
 
     public int getEtatPrison() {
         return etatPrison;

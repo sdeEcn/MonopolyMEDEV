@@ -33,16 +33,22 @@ public abstract class Case {
         this.nom = nom;
     }
 
-    
-   
+ 
 
     /**
      * Constructeur de Case
      * @param c case que l'on cree
      */
     public Case(Case c) {
-        this.nom = c.getNom();
-        
+        this.nom = c.getNom(); 
+    }
+    
+    /**
+     * Constructeur de Case
+     * @param nom nom de la case que l'on cree
+     */
+    public Case(String nom) {
+        this.nom = nom; 
     }
     
     /**
@@ -50,10 +56,6 @@ public abstract class Case {
      */
     public Case() {
         this.nom = "inconnu";
-    }
-    
-    public Case(String nom) {
-        this.nom = nom;
     }
     
     

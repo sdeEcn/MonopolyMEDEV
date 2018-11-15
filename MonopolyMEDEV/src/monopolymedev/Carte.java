@@ -5,11 +5,11 @@
  */
 package monopolymedev;
 
-import MonopolyMEDEV.NonAchetable;
 /**
  *
  * @author Mael Guillossou
  */
+
 public abstract class Carte extends NonAchetable {
 
     public Carte() {

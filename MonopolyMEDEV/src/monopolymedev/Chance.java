@@ -5,17 +5,45 @@
  */
 package monopolymedev;
 
+import java.util.Random;
+
 /**
  *
  * @author Mael Guillossou
  */
 public class Chance extends Carte{
     
+    /**
+     *
+     */
     public Chance(){
         super();
     }
     
+    /**
+     *
+     * @param j
+     */
     public void piocher(Joueur j){
-        
+        Random random = new Random();
+        switch(random.nextInt()){
+            case 0: 
+                System.out.println("Amende pour excès de vitesse : 1 000 F");
+                j.setArgent(j.getArgent()-1000);
+                break;
+            case 1:
+                System.out.println("La banque vous verse un dividende de 5 000 F");
+                j.setArgent(j.getArgent()+5000);
+                break;
+            case 3:
+                System.out.println("Vous êtes imposé pour les réparations de voirie");
+                int perte = 0;
+                for(Achetable a: Joueur.getProprietes()){
+                    if a instanceofa
+                }
+                j.setArgent(0);
+            case 4:
+                
+        }
     }
 }

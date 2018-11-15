@@ -25,7 +25,10 @@ public class Cagnotte extends NonAchetable{
     public void setValeur(int valeur) {
         this.valeur = valeur;
     }
-    
-    
+    // affichage
+   @override
+public String toString(){
+return ("cagnotte:" +this.getValeur());
+}
     
 }
