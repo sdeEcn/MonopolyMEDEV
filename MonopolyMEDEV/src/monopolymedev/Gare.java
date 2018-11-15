@@ -35,7 +35,11 @@ public class Gare extends Achetable{
 	//-----------------Methode-----------------
 	//----------------------------------------------- 
     
-    public int calculLoyer(){
+    /**
+     *Retourne le loyer total en fonction du nombre de gare que le propriétaire de la gare possède
+     @param j Joueur se trouvant sur la gare
+     */
+    public int calculLoyer(Joueur j){
     return proprietaire.nbGares()*2500;}
 }
 
