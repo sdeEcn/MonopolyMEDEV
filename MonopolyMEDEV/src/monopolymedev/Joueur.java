@@ -180,6 +180,7 @@ public class Joueur {
             
             //Trouve la nouvelle case
             int nouvPosition = (this.position + nbDe) % 40;
+            this.position = nouvPosition;
             actionCase();
         } else {
             this.etatPrison--; 

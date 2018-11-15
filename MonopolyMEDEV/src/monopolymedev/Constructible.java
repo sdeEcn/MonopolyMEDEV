@@ -61,7 +61,7 @@ public class Constructible extends Achetable{
      * @param j Représente le joueur qui vient de lancer les dés. Ce paramètre est inutile ici.
      * @return le total du loyer
      */
-    public int calculLoyer(Joueur j) {
+    public int calculLoyer() {
         return (int) (loyer*(1+(0.2*nbMaisons + nbHotels)));
     }
     
