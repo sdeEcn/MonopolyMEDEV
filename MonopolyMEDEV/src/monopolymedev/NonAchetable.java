@@ -1,3 +1,8 @@
+/*
+ * Ecole Centrale de Nantes Option Informatique
+ * MEDEV TP 1
+ * MONOPOLY
+ */
 package monopolymedev;
 
 /**
