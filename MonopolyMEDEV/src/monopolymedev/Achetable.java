@@ -32,7 +32,10 @@ public abstract class Achetable extends Case {
      *
      */
     public Achetable() {
-
+        super("");
+        prix = 0;
+        proprietaire = null;
+        loyer = 0;
     }
 
     /**

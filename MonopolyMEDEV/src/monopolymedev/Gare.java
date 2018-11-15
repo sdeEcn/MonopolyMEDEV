@@ -34,6 +34,21 @@ public class Gare extends Achetable{
      */
     public int calculLoyer(Joueur j){
     return proprietaire.nbGares()*2500;}
+
+    @Override
+    public int calculLoyer() {
+        return 1;
+    }
+    
+    /**
+     * Affiche dans la console les informations concernant a la gare.
+     * @return information de la gare.
+     */
+    public String toString() {
+        return "Case Gare: " +nom+ ", possédée par " +proprietaire.getNom()+ ". Le prix d'achat est " +prix
+                           + "€ et le loyer de base " +loyer+ "€";
+    }
+    
 }
 
 }
