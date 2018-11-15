@@ -22,8 +22,8 @@ public class Constructible extends Achetable{
     /**
      *Le constructeur global
      */
-    public Constructible(int prix, String nom, Joueur proprietaire, int loyer) {
-        super(prix, nom, proprietaire, loyer);
+    public Constructible(int prix, String nom, Joueur proprietaire, int loyer, int position) {
+        super(nom, position, prix, proprietaire, loyer);
         nbHotels = 0;
         nbMaisons = 0;
     }
@@ -32,7 +32,7 @@ public class Constructible extends Achetable{
      *Le constructeur de recopie
      */
     public Constructible(Constructible c) {
-        this(c.prix, c.nom, c.proprietaire, c.loyer);
+        this(c.prix, c.nom, c.proprietaire, c.loyer, c.position);
         nbHotels = 0;
         nbMaisons = 0;
     }
@@ -56,7 +56,7 @@ public class Constructible extends Achetable{
      *Une maison augmente le loyer de 20%, un hôtel de 100%.
      */
     public int calculLoyer() {
-        return loyer*(1+(0.2*nbMaisons + nbHotels));
+        return super.loyer*(1+(0.2*nbMaisons + nbHotels));
     }
     
     
