@@ -73,16 +73,16 @@ public class Constructible extends Achetable{
      * @param joueurCourant Représente le joueur qui vient de lancer les dés. Ce paramètre est inutile ici.
      */
     public int calculLoyer(Joueur joueurCourant) {
-        return loyer*(1+(0.2*nbMaisons + nbHotels));
+        return (int) (loyer*(1+(0.2*nbMaisons + nbHotels)));
     }
     
     /**
      * Affiche dans la console les informations concernant l'instance en cours.
      */
-    public void toString() {
-        System.out.println("Case constructible " +nom+ ", possédée par " +proprietaire.getNom()+ ". Le prix d'achat est " +prix
+    public String toString() {
+        return "Case constructible " +nom+ ", possédée par " +proprietaire.getNom()+ ". Le prix d'achat est " +prix
                            + "€ et le loyer de base " +loyer+ "€. Il y a " +nbMaisons+ " maisons et "+ nbHotels
-                           + " construits, pour un loyer total de " +calculLoyer()+ "€.");
+                           + " construits, pour un loyer total de " +calculLoyer(proprietaire)+ "€.";
     }
     
     

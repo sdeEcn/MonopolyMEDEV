@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8af19c49-8dfe-4466-8583-7d7fe501afc9" name="Default Changelist" comment="Méthode piocher dans Communaute">
-      <change beforePath="$PROJECT_DIR$/MonopolyMEDEV/src/monopolymedev/Joueur.java" beforeDir="false" afterPath="$PROJECT_DIR$/MonopolyMEDEV/src/monopolymedev/Joueur.java" afterDir="false" />
+    <list default="true" id="8af19c49-8dfe-4466-8583-7d7fe501afc9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonopolyMEDEV/src/monopolymedev/Carte.java" beforeDir="false" afterPath="$PROJECT_DIR$/MonopolyMEDEV/src/monopolymedev/Carte.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MonopolyMEDEV/src/monopolymedev/Communaute.java" beforeDir="false" afterPath="$PROJECT_DIR$/MonopolyMEDEV/src/monopolymedev/Communaute.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,25 +33,25 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1301" />
-          <entry key="txt" value="31" />
+          <entry key="java" value="1654" />
+          <entry key="txt" value="38" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1301" />
-          <entry key="PLAIN_TEXT" value="31" />
+          <entry key="JAVA" value="1654" />
+          <entry key="PLAIN_TEXT" value="38" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MonopolyMEDEV/src/monopolymedev/Communaute.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="62" column="21" lean-forward="true" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
+            <state relative-caret-position="526">
+              <caret line="76" column="22" lean-forward="true" selection-start-line="76" selection-start-column="22" selection-end-line="76" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -57,8 +59,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MonopolyMEDEV/src/monopolymedev/Carte.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="25" column="124" selection-start-line="25" selection-start-column="124" selection-end-line="25" selection-end-column="124" />
+            <state relative-caret-position="408">
+              <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -69,16 +71,28 @@
             <state>
               <folding>
                 <element signature="e#0#2212#0" expanded="true" />
+                <element signature="e#1179#1180#0" expanded="true" />
+                <element signature="e#1206#1207#0" expanded="true" />
+                <element signature="e#1285#1286#0" expanded="true" />
+                <element signature="e#1317#1318#0" expanded="true" />
+                <element signature="e#1384#1385#0" expanded="true" />
+                <element signature="e#1412#1413#0" expanded="true" />
+                <element signature="e#1494#1495#0" expanded="true" />
+                <element signature="e#1528#1529#0" expanded="true" />
+                <element signature="e#1605#1606#0" expanded="true" />
+                <element signature="e#1640#1641#0" expanded="true" />
+                <element signature="e#1746#1747#0" expanded="true" />
+                <element signature="e#1794#1795#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MonopolyMEDEV/src/monopolymedev/Joueur.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="174" column="42" selection-start-line="174" selection-start-column="42" selection-end-line="174" selection-end-column="42" />
+            <state relative-caret-position="205">
+              <caret line="169" lean-forward="true" selection-start-line="169" selection-end-line="169" />
               <folding>
                 <element signature="e#3800#3801#0" expanded="true" />
                 <element signature="e#3864#3865#0" expanded="true" />
@@ -98,6 +112,7 @@
                 <element signature="e#4488#4489#0" expanded="true" />
                 <element signature="e#4448#4449#0" expanded="true" />
                 <element signature="e#4492#4493#0" expanded="true" />
+                <element signature="e#4571#4572#0" expanded="true" />
                 <element signature="e#4611#4612#0" expanded="true" />
                 <element signature="e#4678#4679#0" expanded="true" />
                 <element signature="e#4736#4737#0" expanded="true" />
@@ -123,9 +138,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/MonopolyMEDEV/src/monopolymedev/NonAchetable.java" />
+        <option value="$PROJECT_DIR$/MonopolyMEDEV/src/monopolymedev/Joueur.java" />
         <option value="$PROJECT_DIR$/MonopolyMEDEV/src/monopolymedev/Communaute.java" />
         <option value="$PROJECT_DIR$/MonopolyMEDEV/src/monopolymedev/Carte.java" />
-        <option value="$PROJECT_DIR$/MonopolyMEDEV/src/monopolymedev/Joueur.java" />
       </list>
     </option>
   </component>
@@ -176,7 +191,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542275642609" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542276086084" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -202,7 +217,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1542271802810</updated>
-      <workItem from="1542271807775" duration="3806000" />
+      <workItem from="1542271807775" duration="4249000" />
     </task>
     <task id="LOCAL-00001" summary="Méthode piocher dans Communaute">
       <created>1542275243361</created>
@@ -218,11 +233,18 @@
       <option name="project" value="LOCAL" />
       <updated>1542275394733</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Javadoc">
+      <created>1542276021643</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1542276021643</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3806000" />
+    <option name="totallyTimeSpent" value="4249000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -266,7 +288,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Méthode piocher dans Communaute" />
-    <option name="LAST_COMMIT_MESSAGE" value="Méthode piocher dans Communaute" />
+    <MESSAGE value="Javadoc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Javadoc" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/MonopolyMEDEV/src/monopolymedev/MonopolyMEDEV.java">
@@ -287,33 +310,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MonopolyMEDEV/src/monopolymedev/Achetable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#2212#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MonopolyMEDEV/src/monopolymedev/Carte.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="25" column="124" selection-start-line="25" selection-start-column="124" selection-end-line="25" selection-end-column="124" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MonopolyMEDEV/src/monopolymedev/Communaute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="62" column="21" lean-forward="true" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MonopolyMEDEV/src/monopolymedev/Joueur.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="174" column="42" selection-start-line="174" selection-start-column="42" selection-end-line="174" selection-end-column="42" />
+        <state relative-caret-position="205">
+          <caret line="169" lean-forward="true" selection-start-line="169" selection-end-line="169" />
           <folding>
             <element signature="e#3800#3801#0" expanded="true" />
             <element signature="e#3864#3865#0" expanded="true" />
@@ -333,6 +333,7 @@
             <element signature="e#4488#4489#0" expanded="true" />
             <element signature="e#4448#4449#0" expanded="true" />
             <element signature="e#4492#4493#0" expanded="true" />
+            <element signature="e#4571#4572#0" expanded="true" />
             <element signature="e#4611#4612#0" expanded="true" />
             <element signature="e#4678#4679#0" expanded="true" />
             <element signature="e#4736#4737#0" expanded="true" />
@@ -345,6 +346,41 @@
             <element signature="e#4925#4926#0" expanded="true" />
             <element signature="e#4975#4976#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MonopolyMEDEV/src/monopolymedev/Carte.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MonopolyMEDEV/src/monopolymedev/Achetable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#2212#0" expanded="true" />
+            <element signature="e#1179#1180#0" expanded="true" />
+            <element signature="e#1206#1207#0" expanded="true" />
+            <element signature="e#1285#1286#0" expanded="true" />
+            <element signature="e#1317#1318#0" expanded="true" />
+            <element signature="e#1384#1385#0" expanded="true" />
+            <element signature="e#1412#1413#0" expanded="true" />
+            <element signature="e#1494#1495#0" expanded="true" />
+            <element signature="e#1528#1529#0" expanded="true" />
+            <element signature="e#1605#1606#0" expanded="true" />
+            <element signature="e#1640#1641#0" expanded="true" />
+            <element signature="e#1746#1747#0" expanded="true" />
+            <element signature="e#1794#1795#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MonopolyMEDEV/src/monopolymedev/Communaute.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="76" column="22" lean-forward="true" selection-start-line="76" selection-start-column="22" selection-end-line="76" selection-end-column="22" />
         </state>
       </provider>
     </entry>

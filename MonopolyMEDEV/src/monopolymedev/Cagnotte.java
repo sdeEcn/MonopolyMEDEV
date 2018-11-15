@@ -26,7 +26,7 @@ public class Cagnotte extends NonAchetable{
         this.valeur = valeur;
     }
     // affichage
-   @override
+   
 public String toString(){
 return ("cagnotte:" +this.getValeur());
 }
