@@ -13,9 +13,9 @@ package monopolymedev;
 public abstract class Carte extends NonAchetable {
 
     public Carte() {
-        super();
+        super("Carte");
     }
-
+ public abstract String toString();
     /**
      * Pioche une carte et applique l'effet au joueur
      * @param j joueur qui pioche

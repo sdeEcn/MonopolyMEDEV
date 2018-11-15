@@ -119,6 +119,7 @@ public abstract class Achetable extends Case {
         if (prop.getArgent() >= this.prix) {
             prop.setArgent(prop.getArgent() - this.prix);
             this.proprietaire = prop;
+            prop.proprietes.add(this);
         } else {
             System.out.println("Le joueur n'a pas les moyens pour cette case");
         }
@@ -126,7 +127,6 @@ public abstract class Achetable extends Case {
 
     /**
      *  Méthode permettant de calculer le loyer d'après les maisons construites
-     * @param j 
      */
     public abstract int calculLoyer();
 

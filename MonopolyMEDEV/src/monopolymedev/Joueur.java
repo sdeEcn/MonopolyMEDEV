@@ -132,6 +132,21 @@ public class Joueur {
         return nbGares;
     }
     
+     /**
+     * calcule le nombre de cases utilitaires que possède un joueur
+     * @param j le joueur
+     * @return le nombre de cases utilitaires
+     */
+    public int nbUtilitaire(){
+        int c=0;
+        for(int i=0; i<this.proprietes.size();i++){
+            if (this.proprietes.get(i) instanceof Utilitaire){
+                c=c+1;
+            }
+        }
+        return c;
+    }
+    
     /*
     * Renvoie un entier entre 1 et 6
     */
