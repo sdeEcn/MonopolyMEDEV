@@ -20,20 +20,9 @@ public class Gare extends Achetable{
      * Le constructeur de recopie
      */
     
-    public Gare(){
-    super();}
-    /**
-     * Le constructeur de recopie
-     */
     public Gare(int prix, String nom, Joueur proprietaire, int loyer){
-        super(nom,prix,proprietaire,loyer);
+        super(prix,nom,proprietaire,loyer);
     }
-    
-    /**
-     * Le constructeur de recopie
-     */
-    public Gare(Gare g){
-    this(g.prix,g.nom,g.proprietaire,g.loyer);}
     
    	//-----------------------------------------------
 	//-----------------Methode-----------------
@@ -45,12 +34,6 @@ public class Gare extends Achetable{
      */
     public int calculLoyer(Joueur j){
     return proprietaire.nbGares()*2500;}
-
-    @Override
-    public int calculLoyer() {
-        return 1;
-    }
-    
 }
 
-
+}
