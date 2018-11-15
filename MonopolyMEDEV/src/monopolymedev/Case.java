@@ -17,8 +17,8 @@ public abstract class Case {
      *  nom de la case
      *  numero de la case sur le plateau
      */
-    private String nom;
-    private int position;
+    protected String nom;
+    protected int position;
 
     
     /**
@@ -37,6 +37,10 @@ public abstract class Case {
         return position;
     }
 
+    public void setPosition(int position) {
+        this.position = position;
+    }
+    
     /**
      * Constructeur de Case
      * @param nom nom de la nouvelle case
@@ -65,9 +69,6 @@ public abstract class Case {
         this.position = 0;
     }
     
-    public void setPosition(int position) {
-        this.position = position;
-    }
     
     
     
