@@ -47,9 +47,9 @@ public class Prison extends NonAchetable {
     public static boolean payerSortie(Joueur j) {
         //on vérifie si le joueur est en prison
         int prixSortie = 20000;
-        if (j.isEtatPrison() != 0) {
+        if (j.getEtatPrison() != 0) {
             //on vérifie si il a assez d'argent
-            if (j.getArgent < prixSortie) {
+            if (j.getArgent() < prixSortie) {
                 System.out.println("pas assez d'argent");
                 return false;
             } else {
