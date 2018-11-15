@@ -58,7 +58,7 @@ public class Joueur {
      * @param argent Quantité d'argent du joueur.
      * @param etatPrison Nombre de tours restants avant que le joueur puisse sortir de prison.
      * @param proprietes Liste de toutes les cases possédées par le joueur.
-     * @param cartes Liste de toutes les cartes possédées par le joueur.
+     * @param carteSortiePrison booléen qui indique si le joueur possède la carte sortie de prison
      * @param position Position du joueur sur le plateau.
      * @param dernierLancer Valeur du dernier lancer de dé.
      */
