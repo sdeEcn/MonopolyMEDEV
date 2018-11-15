@@ -7,7 +7,7 @@ package monopolymedev;
 /**
  * classe Gare, sous classe de Achetable
  * 
- * @author Lilian Mehl
+ * @author Lilian
  */
 public class Gare extends Achetable{
     
@@ -20,29 +20,9 @@ public class Gare extends Achetable{
      * Le constructeur de recopie
      */
     
-    public Gare(){
-    super();}
-    /**
-     * Le constructeur de recopie
-     */
     public Gare(int prix, String nom, Joueur proprietaire, int loyer){
-        super(nom,prix,proprietaire,loyer);
+        super(prix,nom,proprietaire,loyer);
     }
-    
-    /**
-     * Le constructeur de recopie
-     */
-    public Gare(Gare g){
-    this(g.prix,g.nom,g.proprietaire,g.loyer);}
-
-	/**
-     * Le constructeur de recopie sans propriétaire
-     */
-    public Gare(int prix, String nom, int loyer){
-        this.prix =prix;
-	this.nom=nom;
-	this.loyer=loyer;
-}
     
    	//-----------------------------------------------
 	//-----------------Methode-----------------
@@ -71,4 +51,4 @@ public class Gare extends Achetable{
     
 }
 
-
+}
