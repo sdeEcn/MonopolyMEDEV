@@ -82,8 +82,31 @@ public class Prison extends NonAchetable {
            return false;
         }
   }
+    
+    /*utilisation d'une carte
+    *@param j le joueur qui veut utiliser sa carte
+    *sortie true opération réussie
+    *false non réussie
+    */
+    public boolean utiliserCarte(Joueur j){
+    // on vérifie si le joueur possède une carte qui permet de sortir de prison
+        if (isCarteSortiePrison()){
+        //on libère le joueur
+         j.setEtatPrison(0);
+         system.out.println("joueur"+j+"vous etes libres");
+         //on retire sa carte
+          j.setCarteSortiePrison(false);
+         return true;           
+        } 
+        
+        else {
+            system.out.println("vous n'avez pas de carte sortie de prison");
+            return false;
+              }
+        
+    }
      
-    @override
+    @Override
     public String toString(){
     return("Prison \n caution à payer pour sortir:"+this.prixSortie); 
                         }
