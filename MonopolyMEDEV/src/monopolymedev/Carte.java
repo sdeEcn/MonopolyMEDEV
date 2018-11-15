@@ -29,7 +29,7 @@ public abstract class Carte extends NonAchetable {
      * @param joueur joueur qui doit payer
      * @return le prix total à payer par le joueur
      */
-    protected int reperation(int maison, int hotel, Joueur joueur) {
+    protected int reparation(int maison, int hotel, Joueur joueur) {
         int aPayer = 0;
         for (Achetable propriete: joueur.getProprietes()) {
             if(propriete instanceof Constructible) {
