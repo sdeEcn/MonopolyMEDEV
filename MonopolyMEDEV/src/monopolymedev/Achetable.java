@@ -6,7 +6,6 @@
 package monopolymedev;
 
 /**
- *
  * @author sarah
  */
 public abstract class Achetable extends Case {
