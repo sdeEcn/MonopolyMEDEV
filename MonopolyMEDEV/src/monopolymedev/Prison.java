@@ -50,7 +50,7 @@ public class Prison extends NonAchetable {
         if (j.isEtatPrison() != 0 ) {
             //on vérifie si il a assez d'argent
             if (j.getArgent < this.prixSortie){
-            system.out.println("pas assez d'argent");
+            System.out.println("pas assez d'argent");
             return false;
             }
             else {
@@ -58,13 +58,13 @@ public class Prison extends NonAchetable {
             j.setArgent(j.getArgent() - this.prixSortie);
             //on met à jour son statut
             j.setEtatPrison(0);
-            system.out.println("joueur"+j+"vous etes libres");
+            System.out.println("joueur"+j+"vous etes libres");
             return true;
             }
             
         } 
         else {
-            system.out.println("Vous n'etes pas en prison");
+            System.out.println("Vous n'etes pas en prison");
            return false;
         }
   }
@@ -79,14 +79,14 @@ public class Prison extends NonAchetable {
         if (isCarteSortiePrison()){
         //on libère le joueur
          j.setEtatPrison(0);
-         system.out.println("joueur"+j+"vous etes libres");
+         System.out.println("joueur"+j+"vous etes libres");
          //on retire sa carte
           j.setCarteSortiePrison(false);
          return true;           
         } 
         
         else {
-            system.out.println("vous n'avez pas de carte sortie de prison");
+            System.out.println("vous n'avez pas de carte sortie de prison");
             return false;
               }
         
