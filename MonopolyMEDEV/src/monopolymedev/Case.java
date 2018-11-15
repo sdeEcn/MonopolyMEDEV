@@ -37,25 +37,10 @@ public abstract class Case {
 
     /**
      * Constructeur de Case
-     * @param c case que l'on cree
-     */
-    public Case(Case c) {
-        this.nom = c.getNom(); 
-    }
-    
-    /**
-     * Constructeur de Case
      * @param nom nom de la case que l'on cree
      */
     public Case(String nom) {
         this.nom = nom; 
-    }
-    
-    /**
-     * Constructeur par défaut de Case
-     */
-    public Case() {
-        this.nom = "inconnu";
     }
     
     

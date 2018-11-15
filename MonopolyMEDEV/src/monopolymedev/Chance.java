@@ -34,18 +34,24 @@ public class Chance extends Carte{
         Random random = new Random();
         switch(random.nextInt()){
             case 0: 
-                System.out.println("Amende pour excès de vitesse : 1 000 F");
+                System.out.println("Amende pour excès de vitesse : 1 000");
                 j.setArgent(j.getArgent()-1000);
                 break;
             case 1:
-                System.out.println("La banque vous verse un dividende de 5 000 F");
+                System.out.println("La banque vous verse un dividende de 5 000");
                 j.setArgent(j.getArgent()+5000);
                 break;
             case 3:
-                System.out.println("Vous êtes imposé pour les réparations de voirie");
+                System.out.println("Vous êtes imposé pour les réparations de voirie (2 500/maison 10 000/hotel)");
                 this.reparation(2500, 10000, j);
                 break;
             case 4:
+                System.out.println("Avancez jusqu'à la case départ");
+                j.setPosition(0);
+                break;
+            case 5:
+                System.out.println("Payez les frais de scolarité : 15 000");
+                j.setArgent(j.getArgent()-15000);
                 break;
         }
     }
