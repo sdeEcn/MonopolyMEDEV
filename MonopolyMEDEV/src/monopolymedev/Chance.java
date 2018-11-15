@@ -32,7 +32,7 @@ public class Chance extends Carte{
      */
     public void piocher(Joueur joueur){
         Random random = new Random();
-        switch(random.nextInt()){
+        switch(random.nextInt(9)){
             case 0: 
                 System.out.println("Amende pour excès de vitesse : 1 000");
                 joueur.setArgent(joueur.getArgent()-1000);
