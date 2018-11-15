@@ -6,7 +6,7 @@
 package monopolymedev;
 
 /**
- * classe utilitaire, sous classe de Achetable
+ * classe utilitaire, sous classe de Achetable (correspond aux cases électricité et eau)
  * 
  * @author Elise
  */
@@ -14,7 +14,7 @@ public class Utilitaire extends Achetable {
     //constructeurs
 
     /**
-     * consstructeur par défaut
+     * constructeur par défaut
      */
     public Utilitaire(){
         super();
@@ -36,9 +36,36 @@ public class Utilitaire extends Achetable {
     //méthodes
 
     /**
-     * 
+     * calcule le loyer que doit payer le joueur au propriétaire de la case
+     * @param j joueur
+     * @return loyer
      */
-    public void calculLoyer(){
-        
+    public int calculLoyer(Joueur j){
+        int d = j.dernierLancer;
+        int n;
+        int l;
+        //on calcule le loyer en fonction du nombre de cases utilitaire du propriétaire de la case
+        n=nbUtilitaire(this.proprietaire);
+        if (n==1){
+            l=d*4;
+        }else{
+            l=d*10;
+        }
+        return l;
     }  
+    
+    /**
+     * calcule le nombre de cases utilitaires que possède un joueur
+     * @param j le joueur
+     * @return le nombre de cases utilitaires
+     */
+    public int nbUtilitaire(Joueur j){
+        int c=0;
+        for(int i=0; i<j.proprietes.size();i++){
+            if (j.proprietes.get(i) instanceof Utilitaire){
+                c=c+1;
+            }
+        }
+        return c;
+    }
 }
