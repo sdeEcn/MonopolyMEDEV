@@ -19,6 +19,12 @@ public class Chance extends Carte{
     public Chance(){
         super();
     }
+        /**
+     *  Methode toString() de la classe Chance
+     *  Permet de générer une desciption de la carte
+     */
+    public String toString(){
+    return "il s'agit d'une carte chance"; }
     
     /**
      *
