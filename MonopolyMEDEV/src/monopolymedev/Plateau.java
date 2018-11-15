@@ -98,7 +98,8 @@ public class Plateau {
         for(Case c : this.cases){
             System.out.println(c.toString());
         }
-     /* 
+    } 
+        /* 
      * @param j joueur
      * @return renvoie le nombre de gares possédées par le joueur j
      */
