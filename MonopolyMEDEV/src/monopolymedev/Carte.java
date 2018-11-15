@@ -13,7 +13,7 @@ package monopolymedev;
 public abstract class Carte extends NonAchetable {
 
     public Carte() {
-        super();
+        super("Carte");
     }
     
     public abstract void piocher(Joueur j);
