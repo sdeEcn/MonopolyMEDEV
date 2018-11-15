@@ -24,7 +24,7 @@ public class Chance extends Carte{
      *  Permet de générer une desciption de la carte
      */
     public String toString(){
-    return "il s'agit d'une carte chance"; }
+        return "Case chance - piocher une carte"; }
     
     /**
      *
@@ -63,7 +63,10 @@ public class Chance extends Carte{
                 System.out.println("Libéré de prison");
                 joueur.setCarteSortiePrison(true);
                 break;
-                
+            case 8:
+                System.out.println("Rendez-vous à l'Avenue Henri-Martin.");
+                joueur.setPosition(24);
+                break;
         }
     }
 }
