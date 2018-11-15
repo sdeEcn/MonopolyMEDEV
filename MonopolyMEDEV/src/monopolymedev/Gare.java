@@ -41,7 +41,7 @@ public class Gare extends Achetable{
     public Gare(int prix, String nom, int loyer){
         this.prix =prix;
 	this.nom=nom;
-	this.loyer=loyer);
+	this.loyer=loyer;
 }
     
    	//-----------------------------------------------
