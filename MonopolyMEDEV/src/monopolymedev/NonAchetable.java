@@ -1,4 +1,3 @@
- */
 package MonopolyMEDEV;
 
 /**
@@ -7,6 +6,8 @@ package MonopolyMEDEV;
  */
 public abstract class NonAchetable extends Case {
     
-    
+    public NonAchetable(){
+    super();
+    }
     
 }
