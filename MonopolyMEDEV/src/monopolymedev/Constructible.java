@@ -1,4 +1,4 @@
-package monopolydev;
+package monopolymedev;
 
 public class Constructible extends Achetable{
     
@@ -58,7 +58,7 @@ public class Constructible extends Achetable{
      *Une maison augmente le loyer de 20%, un hôtel de 100%.
      */
     public int calculLoyer() {
-        return super.loyer*(1+(0.2*nbMaisons + nbHotels));
+        return loyer*(1+(0.2*nbMaisons + nbHotels));
     }
     
     
