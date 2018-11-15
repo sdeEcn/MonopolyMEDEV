@@ -73,7 +73,7 @@ public class Constructible extends Achetable{
     public String toString() {
         return "Case constructible " +nom+ ", possédée par " +proprietaire.getNom()+ ". Le prix d'achat est " +prix
                            + "€ et le loyer de base " +loyer+ "€. Il y a " +nbMaisons+ " maisons et "+ nbHotels
-                           + " construits, pour un loyer total de " +calculLoyer(proprietaire)+ "€.";
+                           + " construits, pour un loyer total de " +calculLoyer()+ "€.";
     }
     
     
