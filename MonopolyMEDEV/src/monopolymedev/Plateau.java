@@ -9,24 +9,25 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 
 /**
- * Classe qui represente le plateau de jeu, il contient la liste des joueurs et la liste des cases
+ * Classe qui represente le plateau de jeu, il contient la liste des joueurs et
+ * la liste des cases
+ *
  * @author Thibault
  */
 public class Plateau {
-    private ArrayList<Case> cases; 
-    private LinkedList<Joueur> joueurs; 
-    
-    public Plateau(){
-        this.cases=new ArrayList<>();
-        this.joueurs=new LinkedList<>();
+
+    private ArrayList<Case> cases;
+    private LinkedList<Joueur> joueurs;
+
+    public Plateau() {
+        this.cases = new ArrayList<>();
+        this.joueurs = new LinkedList<>();
     }
 
     public Plateau(ArrayList<Case> cases, LinkedList<Joueur> joueurs) {
         this.cases = cases;
         this.joueurs = joueurs;
     }
-    
-    
 
     public ArrayList<Case> getCases() {
         return cases;
@@ -59,4 +60,31 @@ public class Plateau {
         return res;
     }
     
+
+    /**
+     * Permet de verifier si la partie doit se terminer ou non
+     *
+     * @return Booleen correspondant à la fin de la partie (true) ou non (false)
+     */
+    public boolean finPartie() {
+        if (joueurs.size() == 1 && joueurs.get(0).getArgent() > 0) {
+            return true;
+        } else if (joueurs.size() > 1) {
+            int i = joueurs.size();
+            for (Joueur j : joueurs) {
+                if (j.getArgent() == 0) {
+                    i--;
+                }
+            }
+            if (i == 1) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+
+    }
+
 }
