@@ -51,7 +51,6 @@ public class Communaute extends Carte {
                 System.out.println("Allez gare de lyon");case 7:
                 System.out.println("Amende pour excès de vitesse 1 500");
                 joueur.setArgent(joueur.getArgent() - 1500);
-                break;
                 joueur.setPosition(15);
                 break;
 
