@@ -34,7 +34,7 @@ public class Joueur {
     /**
      * Liste de toutes les cases possédées par le joueur.
      */
-    protected List<Case> proprietes;
+    protected List<Achetable> proprietes;
     
     /**
      * Liste de toutes les cartes possédées par le joueur.
@@ -56,7 +56,7 @@ public class Joueur {
      * @param position Position du joueur sur le plateau.
      * @param dernierLancer Valeur du dernier lancer de dé.
      */
-    public Joueur(String nom, int argent, int etatPrison, List<Case> proprietes, List<Carte> cartes, int position, int dernierLancer) {
+    public Joueur(String nom, int argent, int etatPrison, List<Achetable> proprietes, List<Carte> cartes, int position, int dernierLancer) {
         this.nom = nom;
         this.argent = argent;
         this.etatPrison = etatPrison;
@@ -155,11 +155,11 @@ public class Joueur {
         this.etatPrison = etatPrison;
     }
 
-    public List<Case> getProprietes() {
+    public List<Achetable> getProprietes() {
         return proprietes;
     }
 
-    public void setProprietes(List<Case> proprietes) {
+    public void setProprietes(List<Achetable> proprietes) {
         this.proprietes = proprietes;
     }
 

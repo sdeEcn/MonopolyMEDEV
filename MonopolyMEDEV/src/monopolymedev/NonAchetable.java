@@ -1,4 +1,4 @@
-package MonopolyMEDEV;
+package monopolymedev;
 
 /**
  * classe qui regroupe les cases non achetables
