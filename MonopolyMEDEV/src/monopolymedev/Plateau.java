@@ -62,7 +62,7 @@ public class Plateau {
     
 
     /**
-     * Permet de verifier si la partie doit se terminier ou non
+     * Permet de verifier si la partie doit se terminer ou non
      *
      * @return Booleen correspondant à la fin de la partie (true) ou non (false)
      */
