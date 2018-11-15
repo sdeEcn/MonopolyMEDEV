@@ -23,7 +23,7 @@ public abstract class Carte extends NonAchetable {
         int aPayer = 0;
         for (Achetable propriete: joueur.getProprietes()) {
             if(propriete instanceof Constructible) {
-                aPayer += 2500*((Constructible) propriete).getNbMaisons() + 10000*((Constructible) propriete).getNbHotels()
+                aPayer += 2500*((Constructible) propriete).getNbMaisons() + 10000*((Constructible) propriete).getNbHotels();
             }
         }
 
