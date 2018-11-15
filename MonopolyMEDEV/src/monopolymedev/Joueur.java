@@ -38,9 +38,9 @@ public class Joueur {
     protected List<Achetable> proprietes;
     
     /**
-     * Liste de toutes les cartes possédées par le joueur.
+     * Le joueur possède-t-il la carte sortie de prison
      */
-    protected List<Carte> cartes;
+    protected boolean carteSortiePrison;
     
     /**
      * Position du joueur sur le plateau.
@@ -64,12 +64,12 @@ public class Joueur {
      */
 
 
-    public Joueur(String nom, int argent, int etatPrison, List<Achetable> proprietes, List<Carte> cartes, int position, int dernierLancer) {
+    public Joueur(String nom, int argent, int etatPrison, List<Achetable> proprietes, boolean carteSortiePrison, int position, int dernierLancer) {
         this.nom = nom;
         this.argent = argent;
         this.etatPrison = etatPrison;
         this.proprietes = proprietes;
-        this.cartes = cartes;
+        this.carteSortiePrison = carteSortiePrison;
         this.position = position;
         this.dernierLancer = dernierLancer;
     }
@@ -83,7 +83,7 @@ public class Joueur {
         this.argent = joueur.argent;
         this.etatPrison = joueur.etatPrison;
         this.proprietes = joueur.proprietes;
-        this.cartes = joueur.cartes;
+        this.carteSortiePrison = joueur.carteSortiePrison;
         this.position = joueur.position;
         this.dernierLancer = joueur.dernierLancer;
     }
@@ -96,7 +96,7 @@ public class Joueur {
         this.argent = 0;
         this.etatPrison = 0;
         this.proprietes = new ArrayList<>();
-        this.cartes = new ArrayList<>();
+        this.carteSortiePrison = false;
         this.position = 0;
         this.dernierLancer = 0;
     }
@@ -172,12 +172,12 @@ public class Joueur {
         this.proprietes = proprietes;
     }
 
-    public List<Carte> getCartes() {
-        return cartes;
+    public boolean isCarteSortiePrison() {
+        return carteSortiePrison;
     }
 
-    public void setCartes(List<Carte> cartes) {
-        this.cartes = cartes;
+    public void setCarteSortiePrison(boolean carteSortiePrison) {
+        this.carteSortiePrison = carteSortiePrison;
     }
 
     public int getPosition() {
