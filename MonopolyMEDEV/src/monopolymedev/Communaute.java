@@ -15,7 +15,13 @@ public class Communaute extends Carte {
 
     public Communaute() {
     }
-
+        /**
+     *  Methode toString() de la classe communauté
+     *  Permet de générer une description de la carte
+     */
+    public String toString(){
+    return "il s'agit d'une carte communauté"; }
+    
     /**
      * Pioche une carte communauté et applique l'effet au joueur
      * @param joueur
