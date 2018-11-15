@@ -51,6 +51,15 @@ public class Gare extends Achetable{
         return 1;
     }
     
+    /**
+     * 
+     */
+    @Override
+    public String toString(){
+        String info="";
+        
+        return info;
+    }
 }
 
 
