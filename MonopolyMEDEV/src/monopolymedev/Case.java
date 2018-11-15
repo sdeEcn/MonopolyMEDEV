@@ -13,8 +13,8 @@ public abstract class Case {
     
     /**
      * Attributs :
-     * @param nom nom de la case
-     * @param position numero de la case sur le plateau
+     *  nom de la case
+     *  numero de la case sur le plateau
      */
     private String nom;
     private int position;
