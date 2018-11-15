@@ -46,8 +46,8 @@ public class Plateau {
     
     /**
      * 
-     * @param j
-     * renvoie le nombre de gares possédées par le joueur j
+     * @param j joueur
+     * @return renvoie le nombre de gares possédées par le joueur j
      */
     public int nbGare(Joueur j) {
         int res = 0;
