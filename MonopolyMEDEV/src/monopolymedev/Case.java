@@ -69,9 +69,6 @@ public abstract class Case {
         this.position = 0;
     }
     
-    public void setPosition(int position) {
-        this.position = position;
-    }
     
     
     
