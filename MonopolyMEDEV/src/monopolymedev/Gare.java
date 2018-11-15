@@ -21,6 +21,13 @@ public class Gare extends Achetable {
     public Gare(int prix, String nom, Joueur proprietaire, int loyer) {
         super(nom, prix, proprietaire, loyer);
     }
+    
+    /**
+     * Le constructeur sans proprietaire
+     */
+    public Gare(int prix, String nom, int loyer) {
+        super(nom, prix, null, loyer);
+    }
 
     //-----------------------------------------------
     //-----------------Methode-----------------

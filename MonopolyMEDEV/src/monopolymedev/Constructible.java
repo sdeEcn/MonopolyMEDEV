@@ -59,6 +59,7 @@ public class Constructible extends Achetable{
      * Retourne le loyer total en fonction du loyer de base et du nombre de constructions présentes sur la case.
      * Une maison augmente le loyer de 20%, un hôtel de 100%.
      * @param j Représente le joueur qui vient de lancer les dés. Ce paramètre est inutile ici.
+     * @return le total du loyer
      */
     public int calculLoyer(Joueur j) {
         return (int) (loyer*(1+(0.2*nbMaisons + nbHotels)));
