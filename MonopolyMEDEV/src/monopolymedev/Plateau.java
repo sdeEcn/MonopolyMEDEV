@@ -44,6 +44,56 @@ public class Plateau {
         this.joueurs = joueurs;
     }
     
+    public void initPlateau(){
+        this.cases.add(new DepartOuTaxe());
+        this.cases.add(new Constructible());
+        this.cases.add(new Communaute());
+        this.cases.add(new Constructible());
+        this.cases.add(new DepartOuTaxe());
+        this.cases.add(new Gare());
+        this.cases.add(new Constructible());
+        this.cases.add(new Chance());
+        this.cases.add(new Constructible());
+        this.cases.add(new Constructible());
+        this.cases.add(new Prison());
+        this.cases.add(new Constructible());
+        this.cases.add(new Utilitaire());
+        this.cases.add(new Constructible());
+        this.cases.add(new Gare());
+        this.cases.add(new Constructible());
+        this.cases.add(new Communaute());
+        this.cases.add(new Constructible());
+        this.cases.add(new Constructible());
+        this.cases.add(new Cagnotte());
+        this.cases.add(new Constructible());
+        this.cases.add(new Chance());
+        this.cases.add(new Constructible());
+        this.cases.add(new Constructible());
+        this.cases.add(new Gare());
+        this.cases.add(new Constructible());
+        this.cases.add(new Constructible());
+        this.cases.add(new Utilitaire());
+        this.cases.add(new Constructible());
+        this.cases.add(new GoToPrison());
+        this.cases.add(new Constructible());
+        this.cases.add(new Constructible());
+        this.cases.add(new Communaute());
+        this.cases.add(new Constructible());
+        this.cases.add(new Gare());
+        this.cases.add(new Chance());
+        this.cases.add(new Constructible());
+        this.cases.add(new DepartOuTaxe());
+        this.cases.add(new Constructible());
+        
+    }
     
+    /**
+     * Méthode qui affiche toutes les cases du plateau
+     */
+    public void affiche(){
+        for(Case c : this.cases){
+            System.out.println(c.toString());
+        }
+    }
     
 }
