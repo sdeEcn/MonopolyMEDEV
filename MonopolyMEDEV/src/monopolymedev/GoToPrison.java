@@ -11,7 +11,6 @@ public class GoToPrison extends NonAchetable {
      */
     public GoToPrison (){
         this.setNom("Allez en prison");
-        this.setPosition(30);
     }
     
     /**

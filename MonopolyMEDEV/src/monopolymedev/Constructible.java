@@ -39,7 +39,7 @@ public class Constructible extends Achetable{
      *Le constructeur de recopie
      */
     public Constructible(Constructible c) {
-        this(c.prix, c.nom, c.proprietaire, c.loyer, c.position);
+        this(c.prix, c.nom, c.proprietaire, c.loyer);
         nbHotels = 0;
         nbMaisons = 0;
     }

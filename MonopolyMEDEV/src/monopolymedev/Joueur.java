@@ -19,49 +19,58 @@ public class Joueur {
     /**
      * Nom du joueur.
      */
-    private String nom;
+    protected String nom;
     
     /**
      * Quantité d'argent du joueur.
      */
-    private int argent;
+    protected int argent;
     
     /**
-     * Vrai si le joueur est en prison, faux sinon.
+     * Nombre de tours restants avant que le joueur puisse sortir de prison.
      */
     private int etatPrison;
+
     
     /**
      * Liste de toutes les cases possédées par le joueur.
      */
-    private List<Case> proprietes;
+    protected List<Case> proprietes;
     
     /**
      * Liste de toutes les cartes possédées par le joueur.
      */
-    private List<Carte> cartes;
+    protected List<Carte> cartes;
     
     /**
-     * Position du joueur sur le plateau.
+     * Valeur du dernier lancer de dé.
      */
-    private int position;
-
+    protected int dernierLancer;
+    
+    /**
+     * Position du joueur sur le plateau
+     */
+    private int position; 
+    
     /**
      * Constructeur de Joueur.
      * @param nom Nom du joueur.
      * @param argent Quantité d'argent du joueur.
-     * @param etatPrison Vrai si le joueur est en prison, faux sinon.
+     * @param etatPrison Nombre de tours restants avant que le joueur puisse sortir de prison.
      * @param proprietes Liste de toutes les cases possédées par le joueur.
      * @param cartes Liste de toutes les cartes possédées par le joueur.
      * @param position Position du joueur sur le plateau.
+     * @param dernierLancer Valeur du dernier lancer de dé.
      */
-    public Joueur(String nom, int argent, int etatPrison, List<Case> proprietes, List<Carte> cartes, int position) {
+
+    public Joueur(String nom, int argent, int etatPrison, List<Case> proprietes, List<Carte> cartes, int position, int dernierLancer) {
         this.nom = nom;
         this.argent = argent;
         this.etatPrison = etatPrison;
         this.proprietes = proprietes;
         this.cartes = cartes;
         this.position = position;
+        this.dernierLancer = dernierLancer;
     }
     
     /**
@@ -75,6 +84,7 @@ public class Joueur {
         this.proprietes = joueur.proprietes;
         this.cartes = joueur.cartes;
         this.position = joueur.position;
+        this.dernierLancer = joueur.dernierLancer;
     }
     
     /**
@@ -87,6 +97,7 @@ public class Joueur {
         this.proprietes = new ArrayList<>();
         this.cartes = new ArrayList<>();
         this.position = 0;
+        this.dernierLancer = 0;
     }
     
     /**
@@ -104,6 +115,20 @@ public class Joueur {
             joueur.setArgent(joueur.getArgent() + somme);
             this.argent -= somme; 
         }
+    }
+    
+    /**
+     * Renvoie le nombre de gares possédées par le joueur.
+     * @return Le nombre de gares possédées par le joueur.
+     */
+    public int nbGares() {
+        int nbGares = 0;
+        for(Case caseM : proprietes) {
+            if(caseM instanceof Gare) {
+                nbGares++;
+            }
+        }
+        return nbGares;
     }
     
     /*
@@ -129,7 +154,8 @@ public class Joueur {
         this.argent = argent;
     }
 
-    public int isEtatPrison() {
+
+    public int getEtatPrison() {
         return etatPrison;
     }
 
@@ -159,5 +185,13 @@ public class Joueur {
 
     public void setPosition(int position) {
         this.position = position;
+    }
+    
+    public int getDernierLancer() {
+        return dernierLancer;
+    }
+
+    public void setDernierLancer(int dernierLancer) {
+        this.dernierLancer = dernierLancer;
     }
 }
