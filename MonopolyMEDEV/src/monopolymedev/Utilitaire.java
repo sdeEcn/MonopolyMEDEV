@@ -16,14 +16,13 @@ public class Utilitaire extends Achetable {
     }
 
     /**
-     * constructeur avec paramètre
+     * constructeur avec paramètre, on fixe le loyer à 0 car il n'a pas de sens pour ce type de case
      * @param nom nom de la case
      * @param p prix de la case
      * @param pro propriétaire de la case
-     * @param l loyer
      */
-    public Utilitaire(String nom, int p, Joueur pro, int l){
-        super(nom,p,pro,l);
+    public Utilitaire(String nom, int p, Joueur pro){
+        super(nom,p,pro,0);
     }
 
     
@@ -61,5 +60,10 @@ public class Utilitaire extends Achetable {
             }
         }
         return c;
+    }
+    
+    @Override
+    public String toString(){
+        return "Nom de la case : "+nom+" ; prix de la case : "+prix+" ; propriétaire de la case : "+this.proprietaire.nom;
     }
 }

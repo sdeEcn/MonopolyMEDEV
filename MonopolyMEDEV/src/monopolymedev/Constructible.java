@@ -36,6 +36,15 @@ public class Constructible extends Achetable{
     }
     
     /**
+     * Un constructeur sans attribut propriétaire pour l'initialisation du plateau.
+     */
+    public Constructible(int prix, String nom, int loyer) {
+        super(nom, prix, loyer);
+        nbHotels = 0;
+        nbMaisons = 0;
+    }
+    
+    /**
      * Le constructeur de recopie.
      */
     public Constructible(Constructible c) {
@@ -61,8 +70,9 @@ public class Constructible extends Achetable{
     /**
      * Retourne le loyer total en fonction du loyer de base et du nombre de constructions présentes sur la case.
      * Une maison augmente le loyer de 20%, un hôtel de 100%.
+     * @param joueurCourant Représente le joueur qui vient de lancer les dés. Ce paramètre est inutile ici.
      */
-    public int calculLoyer() {
+    public int calculLoyer(Joueur joueurCourant) {
         return (int) (loyer*(1+(0.2*nbMaisons + nbHotels)));
     }
     
@@ -72,7 +82,7 @@ public class Constructible extends Achetable{
     public String toString() {
         return "Case constructible " +nom+ ", possédée par " +proprietaire.getNom()+ ". Le prix d'achat est " +prix
                            + "€ et le loyer de base " +loyer+ "€. Il y a " +nbMaisons+ " maisons et "+ nbHotels
-                           + " construits, pour un loyer total de " +calculLoyer()+ "€.";
+                           + " construits, pour un loyer total de " +calculLoyer(proprietaire)+ "€.";
     }
     
     
