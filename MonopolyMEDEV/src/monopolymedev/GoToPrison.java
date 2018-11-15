@@ -11,7 +11,7 @@ public class GoToPrison extends NonAchetable {
      * Constructeur par défaut de GoToPrison
      */
     public GoToPrison (){
-        this.setNom("Allez en prison");
+        supper("Allez en prison");
     }
     
     /**
