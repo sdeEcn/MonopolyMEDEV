@@ -34,6 +34,13 @@ public class Gare extends Achetable{
      */
     public Gare(Gare g){
     this(g.prix,g.nom,g.proprietaire,g.loyer);}
+
+	/**
+     * Le constructeur de recopie
+     */
+    public Gare(int prix, String nom, int loyer){
+        this(g.prix,g.nom,g.loyer);
+}
     
    	//-----------------------------------------------
 	//-----------------Methode-----------------
