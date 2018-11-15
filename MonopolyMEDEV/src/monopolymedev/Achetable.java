@@ -118,6 +118,6 @@ public abstract class Achetable extends Case {
     /**
      *  Méthode permettant de calculer le loyer d'après les maisons construites
      */
-    public abstract int calculLoyer();
+    public abstract int calculLoyer(Joueur j);
 
 }
