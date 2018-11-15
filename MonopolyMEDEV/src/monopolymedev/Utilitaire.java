@@ -22,12 +22,15 @@ public class Utilitaire extends Achetable {
     
     //méthodes
 
+    @Override
+    public int calculLoyer(){
+        return 0;
+    }
     /**
      * calcule le loyer que doit payer le joueur au propriétaire de la case
      * @param j joueur
      * @return loyer
      */
-    @Override
     public int calculLoyer(Joueur j){
         int d = j.dernierLancer;
         int n;
