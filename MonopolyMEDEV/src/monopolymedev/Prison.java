@@ -25,24 +25,10 @@ public class Prison extends NonAchetable {
      * @param prix prix de sortie
      */
     public Prison(int prix) {
+        super("Prison");
         this.prixSortie = prix;
     }
 
-    /**
-     * constructeur de recopie
-     *
-     * @param p prison à copier
-     */
-    public Prison(Prison p) {
-        this.prixSortie = p.getPrixSortie();
-    }
-
-    /**
-     * constructeur par défaut
-     */
-    public Prison() {
-        this.prixSortie = 0;
-    }
 
     //getter / setter
     public void setPrixSortie(int p) {
