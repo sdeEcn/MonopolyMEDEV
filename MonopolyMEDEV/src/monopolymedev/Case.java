@@ -37,7 +37,7 @@ public abstract class Case {
         return position;
     }
 
-    public void setPostiion(int position) {
+    public void setPosition(int position) {
         this.position = position;
     }
     
