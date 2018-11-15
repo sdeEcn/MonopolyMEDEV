@@ -1,3 +1,8 @@
+/*
+ * Ecole Centrale de Nantes Option Informatique
+ * MEDEV TP 1
+ * MONOPOLY
+ */
 package monopolymedev;
 
 
@@ -53,19 +58,23 @@ public class Constructible extends Achetable{
     /**
      * Retourne le loyer total en fonction du loyer de base et du nombre de constructions présentes sur la case.
      * Une maison augmente le loyer de 20%, un hôtel de 100%.
-     * @param j Représente le joueur qui vient de lancer les dés. Ce paramètre est inutile ici.
+     * 
+     * @return le total du loyer
      */
-    public int calculLoyer(Joueur j) {
+    @Override
+    public int calculLoyer() {
         return (int) (loyer*(1+(0.2*nbMaisons + nbHotels)));
     }
     
     /**
      * Affiche dans la console les informations concernant l'instance en cours.
+     * @return information du case
      */
+    @Override
     public String toString() {
         return "Case constructible " +nom+ ", possédée par " +proprietaire.getNom()+ ". Le prix d'achat est " +prix
                            + "€ et le loyer de base " +loyer+ "€. Il y a " +nbMaisons+ " maisons et "+ nbHotels
-                           + " construits, pour un loyer total de " +calculLoyer(proprietaire)+ "€.";
+                           + " construits, pour un loyer total de " +calculLoyer()+ "€.";
     }
     
     
@@ -85,7 +94,7 @@ public class Constructible extends Achetable{
         return nbMaisons;
     }
     
-    public void setNbMaisons() {
+    public void setNbMaisons(int nbMaisons) {
         this.nbMaisons = nbMaisons;
     }
 }

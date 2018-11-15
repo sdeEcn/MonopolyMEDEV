@@ -1,3 +1,8 @@
+/*
+ * Ecole Centrale de Nantes Option Informatique
+ * MEDEV TP 1
+ * MONOPOLY
+ */
 package monopolymedev;
 
 
@@ -52,6 +57,8 @@ public class Joueur {
      */
     protected int dernierLancer;
     
+    protected Plateau plateau;
+    
     /**
      * Constructeur de Joueur.
      * @param nom Nom du joueur.
@@ -64,7 +71,7 @@ public class Joueur {
      */
 
 
-    public Joueur(String nom, int argent, int etatPrison, List<Achetable> proprietes, boolean carteSortiePrison, int position, int dernierLancer) {
+    public Joueur(String nom, int argent, int etatPrison, List<Achetable> proprietes, boolean carteSortiePrison, int position, int dernierLancer, Plateau plateau) {
         this.nom = nom;
         this.argent = argent;
         this.etatPrison = etatPrison;
@@ -72,6 +79,7 @@ public class Joueur {
         this.carteSortiePrison = carteSortiePrison;
         this.position = position;
         this.dernierLancer = dernierLancer;
+        this.plateau = plateau;
     }
     
     /**
@@ -86,6 +94,7 @@ public class Joueur {
         this.carteSortiePrison = joueur.carteSortiePrison;
         this.position = joueur.position;
         this.dernierLancer = joueur.dernierLancer;
+        this.plateau = joueur.plateau;
     }
     
     /**
@@ -99,6 +108,7 @@ public class Joueur {
         this.carteSortiePrison = false;
         this.position = 0;
         this.dernierLancer = 0;
+        this.plateau = null;
     }
     
     /**
@@ -152,6 +162,63 @@ public class Joueur {
     */
     public static int lancerDe() {
         return ((int) Math.floor(Math.random() * 6)) + 1;
+    }
+    
+    /**
+     * Joue un tour de jeu.
+     */
+    public void tourDeJeu() {
+        if(this.etatPrison == 0) {
+            //Lance le dé
+            int nbDe = lancerDe();
+            this.dernierLancer = nbDe;
+            
+            //Passage case départ
+            if(this.position + nbDe > 40) {
+                this.argent += ((DepartOuTaxe)plateau.getCases().get(0)).getGain();
+            }
+            
+            //Trouve la nouvelle case
+            int nouvPosition = (this.position + nbDe) % 40;
+            this.position = nouvPosition;
+            actionCase();
+        } else {
+            this.etatPrison--; 
+        }
+    }
+    
+    /**
+     * Effectue une action de case.
+     */
+    public void actionCase() {
+        Case caseJoueur = plateau.getCases().get(this.position);
+        System.out.println("Le joueur " + this.nom + " est sur la case " + caseJoueur.getNom());
+        
+        if(caseJoueur instanceof Achetable) {
+            Joueur proprietaire = ((Achetable)caseJoueur).proprietaire;
+            if(proprietaire == null) {
+                if(this.dernierLancer % 2 == 1 && this.argent >= ((Achetable) caseJoueur).prix) {
+                    System.out.println("Le joueur " + nom + " achète " + caseJoueur.getNom());
+                    this.proprietes.add((Achetable)caseJoueur);
+                    this.argent -= ((Achetable) caseJoueur).prix;
+                    ((Achetable)caseJoueur).setProprietaire(this);
+                }
+            } else if(proprietaire != this) {
+                System.out.println("Le joueur " + nom + " paie " + ((Achetable)caseJoueur).loyer + " au joueur " + proprietaire.getNom());
+                payer(proprietaire, ((Achetable)caseJoueur).loyer);
+            }
+        } else {
+            if(caseJoueur instanceof GoToPrison) {
+                GoToPrison.envoyerPrison(this);
+                this.etatPrison = 3;
+            } else if(caseJoueur instanceof Cagnotte) {
+                this.argent += ((Cagnotte) caseJoueur).getValeur();
+            } else if(caseJoueur instanceof Carte) {
+                ((Carte)caseJoueur).piocher(this);
+            } else if(caseJoueur instanceof DepartOuTaxe) {
+                this.argent += ((DepartOuTaxe)caseJoueur).getGain();
+            }
+        }
     }
     
     public String getNom() {
@@ -209,5 +276,19 @@ public class Joueur {
 
     public void setDernierLancer(int dernierLancer) {
         this.dernierLancer = dernierLancer;
+    }
+    
+    /**
+     * Permet de faire avancer le joueur du nombre qui est en paramètre de la
+     * méthode
+     *
+     * @param de valeur du du definissant de combien le joueur avance
+     */
+    public void avance(int de) {
+        if (this.getPosition() + de > 39) {
+            this.setPosition(de - (39 - this.getPosition()) - 1);
+        } else {
+            this.setPosition(this.getPosition() + de);
+        }
     }
 }
