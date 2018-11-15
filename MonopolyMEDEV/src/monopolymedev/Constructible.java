@@ -12,12 +12,12 @@ public class Constructible extends Achetable{
     //-----------------------------------------------------
     
     /**
-     * Le nombre d'hôtels construits dans l'instance en cours
+     * Le nombre d'hôtels construits dans l'instance en cours.
      */
     private int nbHotels;
     
     /**
-     * Le nombres de maisons construites dans l'instance en cours
+     * Le nombres de maisons construites dans l'instance en cours.
      */
     private int nbMaisons;
     
@@ -27,16 +27,16 @@ public class Constructible extends Achetable{
     //---------------------------------------------------------
     
     /**
-     * Le constructeur global
+     * Le constructeur général.
      */
-    public Constructible(int prix, String nom, Joueur proprietaire, int loyer, int position) {
-        super(nom, position, prix, proprietaire, loyer);
+    public Constructible(int prix, String nom, Joueur proprietaire, int loyer) {
+        super(nom, prix, proprietaire, loyer);
         nbHotels = 0;
         nbMaisons = 0;
     }
     
     /**
-     * Le constructeur de recopie
+     * Le constructeur de recopie.
      */
     public Constructible(Constructible c) {
         this(c.prix, c.nom, c.proprietaire, c.loyer);
@@ -45,7 +45,7 @@ public class Constructible extends Achetable{
     }
     
     /**
-     * Le constructeur par défaut
+     * Le constructeur par défaut.
      */
     public Constructible() {
         super();
@@ -67,7 +67,7 @@ public class Constructible extends Achetable{
     }
     
     /**
-     * Affiche les informations concernant l'instance en cours
+     * Affiche dans la console les informations concernant l'instance en cours.
      */
     public void toString() {
         System.out.println("Case constructible " +nom+ ", possédée par " +proprietaire.getNom()+ ". Le prix d'achat est " +prix
