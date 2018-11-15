@@ -65,7 +65,12 @@ public class Chance extends Carte{
                 break;
             case 8:
                 System.out.println("Rendez-vous à l'Avenue Henri-Martin.");
+                if(joueur.getPosition()>24){
+                    joueur.setPosition(0);
+                    joueur.actionCase();
+                }
                 joueur.setPosition(24);
+                joueur.actionCase();
                 break;
         }
     }
