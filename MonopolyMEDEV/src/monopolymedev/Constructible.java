@@ -1,3 +1,8 @@
+/*
+ * Ecole Centrale de Nantes Option Informatique
+ * MEDEV TP 1
+ * MONOPOLY
+ */
 package monopolymedev;
 
 
@@ -12,12 +17,12 @@ public class Constructible extends Achetable{
     //-----------------------------------------------------
     
     /**
-     *Le nombre d'hôtels construits dans l'instance en cours
+     * Le nombre d'hôtels construits dans l'instance en cours.
      */
     private int nbHotels;
     
     /**
-     *Le nombres de maisons construites dans l'instance en cours
+     * Le nombres de maisons construites dans l'instance en cours.
      */
     private int nbMaisons;
     
@@ -27,31 +32,23 @@ public class Constructible extends Achetable{
     //---------------------------------------------------------
     
     /**
-     *Le constructeur global
+     * Le constructeur général.
      */
-    public Constructible(int prix, String nom, Joueur proprietaire, int loyer, int position) {
-        super(nom, position, prix, proprietaire, loyer);
+    public Constructible(int prix, String nom, Joueur proprietaire, int loyer) {
+        super(nom, prix, proprietaire, loyer);
         nbHotels = 0;
         nbMaisons = 0;
     }
     
     /**
-     *Le constructeur de recopie
+     * Un constructeur sans attribut propriétaire pour l'initialisation du plateau.
      */
-    public Constructible(Constructible c) {
-        this(c.prix, c.nom, c.proprietaire, c.loyer, c.position);
+    public Constructible(int prix, String nom, int loyer) {
+        super(nom, prix, loyer);
         nbHotels = 0;
         nbMaisons = 0;
     }
     
-    /**
-     *Le constructeur par défaut
-     */
-    public Constructible() {
-        super();
-        nbHotels = 0;
-        nbMaisons = 0;
-    }
     
     
     //----------------------------------------------------
@@ -59,11 +56,25 @@ public class Constructible extends Achetable{
     //----------------------------------------------------
     
     /**
-     *Retourne le loyer total en fonction du loyer de base et du nombre de constructions présentes sur la case.
-     *Une maison augmente le loyer de 20%, un hôtel de 100%.
+     * Retourne le loyer total en fonction du loyer de base et du nombre de constructions présentes sur la case.
+     * Une maison augmente le loyer de 20%, un hôtel de 100%.
+     * 
+     * @return le total du loyer
      */
+    @Override
     public int calculLoyer() {
-        return loyer*(1+(0.2*nbMaisons + nbHotels));
+        return (int) (loyer*(1+(0.2*nbMaisons + nbHotels)));
+    }
+    
+    /**
+     * Affiche dans la console les informations concernant l'instance en cours.
+     * @return information du case
+     */
+    @Override
+    public String toString() {
+        return "Case constructible " +nom+ ", possédée par " +proprietaire.getNom()+ ". Le prix d'achat est " +prix
+                           + "€ et le loyer de base " +loyer+ "€. Il y a " +nbMaisons+ " maisons et "+ nbHotels
+                           + " construits, pour un loyer total de " +calculLoyer()+ "€.";
     }
     
     
@@ -83,7 +94,7 @@ public class Constructible extends Achetable{
         return nbMaisons;
     }
     
-    public void setNbMaisons() {
+    public void setNbMaisons(int nbMaisons) {
         this.nbMaisons = nbMaisons;
     }
 }

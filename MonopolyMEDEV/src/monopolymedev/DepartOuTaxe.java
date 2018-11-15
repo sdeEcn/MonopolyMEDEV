@@ -5,7 +5,6 @@
  */
 package monopolymedev;
 
-import MonopolyMEDEV.NonAchetable;
 
 /**
  *
@@ -27,8 +26,8 @@ public class DepartOuTaxe extends NonAchetable  {
      * @param position position de la nouvelle case
      * @param gain ce que l'on gagne en tombant sur la case
      */
-    public DepartOuTaxe(String nom, int position,int gain) {
-        super(nom,position);
+    public DepartOuTaxe(String nom,int gain) {
+        super(nom);
         this.gain = gain;
     }
     

@@ -32,23 +32,34 @@ public abstract class Achetable extends Case {
      *
      */
     public Achetable() {
-
+        super("");
+        prix = 0;
+        proprietaire = null;
+        loyer = 0;
     }
 
     /**
-     *
+     *  Constructeur avec proprietaire
      * @param nom
-     * @param pos
      * @param p
      * @param prop
      * @param loy
      */
-    public Achetable(String nom, int pos, int p, Joueur prop, int loy) {
-        super(nom, pos);
+    public Achetable(String nom, int p, Joueur prop, int loy) {
+        super(nom);
         prix = p;
         proprietaire = prop;
         loyer = loy;
     }
+    /**
+    * Constructeur sans proprietaire
+    */
+    public Achetable(String nom, int p, int loy){
+        super(nom);
+        prix = p;
+        loyer = loy;
+    }
+  
 
     //getters, setters
 
@@ -111,6 +122,7 @@ public abstract class Achetable extends Case {
         if (prop.getArgent() >= this.prix) {
             prop.setArgent(prop.getArgent() - this.prix);
             this.proprietaire = prop;
+            prop.proprietes.add(this);
         } else {
             System.out.println("Le joueur n'a pas les moyens pour cette case");
         }

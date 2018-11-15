@@ -12,9 +12,10 @@ package monopolymedev;
 
 
 public class Cagnotte extends NonAchetable{
-    privath int valeur;
+    private int valeur;
     
     public Cagnotte (){
+        super("Cagnotte");
         this.valeur = 2000;
     }
 
@@ -25,7 +26,10 @@ public class Cagnotte extends NonAchetable{
     public void setValeur(int valeur) {
         this.valeur = valeur;
     }
-    
-    
+    // affichage
+   
+public String toString(){
+return ("cagnotte:" +this.getValeur());
+}
     
 }

@@ -5,9 +5,11 @@
  */
 package monopolymedev;
 
+import java.util.ArrayList;
+
 /**
  *
- * @author Alban
+ * @author Robin
  */
 public class MonopolyMEDEV {
 
@@ -15,7 +17,15 @@ public class MonopolyMEDEV {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        Plateau jeu = new Plateau();
         
+        jeu.initPlateau();
+        for (int i =1;i<5;i++){
+            jeu.getJoueurs().add(new Joueur("J"+i,100000,0,new ArrayList<Achetable>(),false,0,0,jeu));
+        }
+        while(!jeu.finPartie()){
+            jeu.tourDeJeu();
+        }
     }
     
 }

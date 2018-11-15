@@ -1,4 +1,9 @@
-package MonopolyMEDEV;
+/*
+ * Ecole Centrale de Nantes Option Informatique
+ * MEDEV TP 1
+ * MONOPOLY
+ */
+package monopolymedev;
 
 /**
  * classe qui regroupe les cases non achetables
@@ -6,8 +11,9 @@ package MonopolyMEDEV;
  */
 public abstract class NonAchetable extends Case {
     
-    public NonAchetable(){
-    super();
+    public NonAchetable(String nom) {
+        super(nom);
     }
+    
     
 }

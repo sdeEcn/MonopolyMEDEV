@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package MonopolyMEDEV;
+package monopolymedev;
 
 /**
  * case prison
@@ -25,23 +25,8 @@ public class Prison extends NonAchetable {
      * @param prix prix de sortie
      */
     public Prison(int prix) {
+        super("Prison");
         this.prixSortie = prix;
-    }
-
-    /**
-     * constructeur de recopie
-     *
-     * @param p prison à copier
-     */
-    public Prison(Prison p) {
-        this.prixSortie = p.getPrixSortie();
-    }
-
-    /**
-     * constructeur par défaut
-     */
-    public Prison() {
-        this.prixSortie = 0;
     }
 
     //getter / setter
@@ -53,19 +38,58 @@ public class Prison extends NonAchetable {
         return this.prixSortie;
     }
 
-    /**
-     * Methode permettant au joueur de payer pour pouvoir sortir de prison
-     *
-     * @param joueur : Parametre correspondant au joueur voulant payer sa sortie
-     * de la prison
+    /*methode pour payer la caution
+      
+     *@param j le joueur qui veut payer 
+      *sortie true paiement effectué
+      *false paiement refusé
      */
-    public void payerSortie(Joueur joueur) {
-        if (joueur.argent >= prixSortie) {
-            joueur.argent = joueur.argent - prixSortie;
-            joueur.etatPrison = 0;
+    public static boolean payerSortie(Joueur j) {
+        //on vérifie si le joueur est en prison
+        int prixSortie = 20000;
+        if (j.getEtatPrison() != 0) {
+            //on vérifie si il a assez d'argent
+            if (j.getArgent() < prixSortie) {
+                System.out.println("pas assez d'argent");
+                return false;
+            } else {
+                //on effectue le paiement
+                j.setArgent(j.getArgent() - prixSortie);
+                //on met à jour son statut
+                j.setEtatPrison(0);
+                System.out.println("joueur" + j + "vous etes libres");
+                return true;
+            }
+
         } else {
-            System.out.println("Paiement impossible, vous restez ou vous etes !");
+            System.out.println("Vous n'etes pas en prison");
+            return false;
         }
+    }
+
+    /*utilisation d'une carte
+    *@param j le joueur qui veut utiliser sa carte
+    *sortie true opération réussie
+    *false non réussie
+     */
+    public static boolean utiliserCarte(Joueur j) {
+        // on vérifie si le joueur possède une carte qui permet de sortir de prison
+        if (j.isCarteSortiePrison()) {
+            //on libère le joueur
+            j.setEtatPrison(0);
+            System.out.println("joueur" + j + "vous etes libres");
+            //on retire sa carte
+            j.setCarteSortiePrison(false);
+            return true;
+        } else {
+            System.out.println("vous n'avez pas de carte sortie de prison");
+            return false;
+        }
+
+    }
+
+    public String toString() {
+        return ("Prison \n caution à payer pour sortir:" + this.prixSortie);
     }
 
 }
